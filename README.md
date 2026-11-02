@@ -21,6 +21,10 @@ By [TechMouad](https://techmouad.com). [دليل عربي](docs/README.ar.md).
 - Show/hide and independently position Arabic text, translation, surah name, ayah reference, reciter name and a custom watermark.
 - Live layout preview, adjustable text sizes/widths, background dimming and optional caption panels.
 
+## Arabic video walkthrough
+
+[Watch the recorded walkthrough (1 min 55 sec)](https://techmouad.com/wp-content/uploads/2026/11/tutorial-final-ar.mp4): local footage upload, passage review, logo placement, watermark, preview, generation and download. Instructions are written in Arabic on screen; the resulting video includes its original recitation. Installation is explained below.
+
 ## Install
 
 Requires **Python 3.11+** and **FFmpeg/ffprobe** on PATH. A CPU is sufficient; rendering speed depends on your computer.

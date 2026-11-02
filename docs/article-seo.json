@@ -1,10 +1,10 @@
 {
-  "title": "إنشاء فيديو قرآن بشعارك: شرح Quran Reels Studio المجاني",
-  "seoTitle": "إنشاء فيديو قرآن بشعارك مجاناً | Quran Reels Studio",
-  "metaDescription": "أنشئ فيديو قرآن بخلفية طبيعية وتلاوة حقيقية وشعارك باستخدام Quran Reels Studio. أداة مفتوحة المصدر مع تحكم في النصوص وشرح التثبيت والتصدير خطوة بخطوة.",
+  "title": "إنشاء فيديو قرآن بشعارك مجاناً: 6 خطوات سهلة",
+  "seoTitle": "إنشاء فيديو قرآن بشعارك مجاناً: 6 خطوات سهلة",
+  "metaDescription": "إنشاء فيديو قرآن بشعارك وخلفية طبيعية في 6 خطوات مع Quran Reels Studio. شاهد شرحاً عملياً لإضافة التلاوة والنص العربي وضبط الشعار وتصدير MP4 على جهازك.",
   "excerpt": "أداة مجانية ومفتوحة المصدر تجمع تلاوة حقيقية ونص الآيات وخلفية فيديو، مع شعارك وترجمة اختيارية. جرّب الإعداد على جهازك واتبع مثالاً موثقاً قبل تصدير MP4.",
-  "slug": "quran-reels-studio",
-  "canonical": "https://techmouad.com/quran-reels-studio/",
+  "slug": "إنشاء-فيديو-قرآن",
+  "canonical": "https://techmouad.com/إنشاء-فيديو-قرآن/",
   "focusKeyword": "إنشاء فيديو قرآن",
   "secondaryKeywords": [
     "تصميم فيديو قرآن",
@@ -25,5 +25,16 @@
     51,
     10
   ],
-  "status": "draft"
+  "status": "draft",
+  "previousSlug": "quran-reels-studio",
+  "tutorial": {
+    "durationSeconds": 114.925333,
+    "videoUrl": "https://techmouad.com/wp-content/uploads/2026/11/tutorial-final-ar.mp4",
+    "posterUrl": "https://techmouad.com/wp-content/uploads/2026/11/tutorial-poster.webp",
+    "videoMediaId": 1019,
+    "hasSpokenTutorialNarration": false,
+    "hasBurnedArabicCaptions": true
+  },
+  "rankMathFocusKeyword": "إنشاء فيديو قرآن",
+  "scoreVerification": "Pending WordPress editor sign-in; no numeric score has been fabricated or assigned."
 }

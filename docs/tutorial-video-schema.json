@@ -1,0 +1,20 @@
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "@id": "https://techmouad.com/إنشاء-فيديو-قرآن/#tutorial",
+  "name": "إنشاء فيديو قرآن بشعارك: شرح Quran Reels Studio خطوة بخطوة",
+  "description": "تسجيل فعلي لواجهة Quran Reels Studio مع تعليمات عربية مكتوبة لاختيار الخلفية والآيات وإضافة الشعار وضبط التصميم والتصدير. يتضمن مثال النتيجة تلاوة الآيات.",
+  "thumbnailUrl": [
+    "https://techmouad.com/wp-content/uploads/2026/11/tutorial-poster.webp"
+  ],
+  "uploadDate": "2026-11-02T15:32:18Z",
+  "duration": "PT1M55S",
+  "contentUrl": "https://techmouad.com/wp-content/uploads/2026/11/tutorial-final-ar.mp4",
+  "inLanguage": "ar",
+  "creator": {
+    "@type": "Organization",
+    "name": "TechMouad",
+    "url": "https://techmouad.com/"
+  },
+  "isAccessibleForFree": true
+}

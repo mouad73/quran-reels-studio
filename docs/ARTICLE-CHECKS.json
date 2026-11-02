@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-11-02T15:37:45.253Z",
+  "wordCount": 2708,
+  "keywordOccurrences": 9,
+  "checks": {
+    "keywordInTitle": true,
+    "keywordAtTitleStart": true,
+    "numberInTitle": true,
+    "keywordInDescription": true,
+    "keywordInUrl": true,
+    "keywordInFirstTenPercent": true,
+    "keywordInSubheading": true,
+    "keywordInImageAlt": true,
+    "internalLinks": true,
+    "externalLinks": true,
+    "tableOfContents": true,
+    "videoEmbedded": true,
+    "textTranscript": true,
+    "originalEvidence": true,
+    "sources": true,
+    "videoSchema": true,
+    "noInventedReviews": true,
+    "shortParagraphs": true
+  },
+  "allContentChecksPass": true,
+  "rankMathEditorScore": null,
+  "rankMathStatus": "Editor login is required to read and verify the live score. No stored numeric score was overwritten."
+}

@@ -1,7 +1,7 @@
 {
   "@context": "https://schema.org",
   "@type": "SoftwareSourceCode",
-  "@id": "https://techmouad.com/quran-reels-studio/#source-code",
+  "@id": "https://techmouad.com/إنشاء-فيديو-قرآن/#source-code",
   "name": "Quran Reels Studio",
   "description": "أداة محلية مفتوحة المصدر لإنشاء فيديو قرآن بتلاوة أصلية وخلفيات وشعار ونصوص قابلة للتخصيص.",
   "url": "https://github.com/mouad73/quran-reels-studio",
@@ -16,5 +16,5 @@
     "name": "TechMouad",
     "url": "https://techmouad.com/"
   },
-  "mainEntityOfPage": "https://techmouad.com/quran-reels-studio/"
+  "mainEntityOfPage": "https://techmouad.com/إنشاء-فيديو-قرآن/"
 }
