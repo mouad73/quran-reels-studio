@@ -6,6 +6,8 @@ if not exist .venv\Scripts\python.exe (
 )
 .venv\Scripts\python.exe -m pip install -e .
 if errorlevel 1 goto failed
+.venv\Scripts\python.exe -m quran_reels.setup_windows
+if errorlevel 1 goto failed
 .venv\Scripts\python.exe -m streamlit run app.py
 if errorlevel 1 goto failed
 exit /b 0

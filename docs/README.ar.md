@@ -16,10 +16,13 @@
 ```powershell
 python -m venv .venv
 .venv\Scripts\python.exe -m pip install -e .
+.venv\Scripts\python.exe -m quran_reels.setup_windows
 .venv\Scripts\python.exe -m streamlit run app.py
 ```
 
 تظهر الواجهة في المتصفح على `http://127.0.0.1:8501`. الواجهة الحالية بالإنجليزية، وتدعم عرض القرآن بالعربية من اليمين إلى اليسار.
+
+في Windows x64 يثبت أمر setup_windows مكتبة FriBiDi اللازمة لتشكيل العربية داخل البيئة المحلية، إذا كانت غير متاحة. ينزّل حزمة ثابتة من conda-forge ويتحقق من بصمتها ويحفظ رخصتها مع المكتبة. ينفذ ملف التشغيل هذه الخطوة تلقائياً. إذا تعذر تحميل المكتبة، راجع قسم Windows في README أو استخدم Docker.
 
 ## إنشاء الفيديو
 

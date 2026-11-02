@@ -48,6 +48,7 @@ Windows:
 
 ```powershell
 .venv\Scripts\python.exe -m pip install -e .
+.venv\Scripts\python.exe -m quran_reels.setup_windows
 .venv\Scripts\python.exe -m streamlit run app.py
 ```
 
@@ -59,6 +60,8 @@ macOS / Linux:
 ```
 
 The interface opens at **http://127.0.0.1:8501**. On Windows, `start-windows.bat` creates the environment, installs the app, and starts it. It still requires Python and FFmpeg to be installed first.
+
+Windows x64 also needs FriBiDi for Arabic layout, as described in [Pillow's documentation](https://pillow.readthedocs.io/en/stable/installation/building-from-source.html). The Windows setup command (also run by the launcher) downloads a pinned [conda-forge FriBiDi package](https://anaconda.org/conda-forge/fribidi), checks its SHA-256, and places its DLL and license inside `.venv`. It does not change system settings. If the DLL cannot load, install Microsoft's current x64 Visual C++ Redistributable from its official download page, or use Docker. The bundled runtime installer targets Windows x64; other Windows architectures should use Docker.
 
 ## Create your first video
 

@@ -33,7 +33,7 @@ def check_dependencies():
     if not shutil.which("ffmpeg") or not shutil.which("ffprobe"):
         raise UserError("FFmpeg and ffprobe must be available on PATH. See README.md.")
     if not features.check_feature("raqm"):
-        raise UserError("Pillow requires RAQM for correct Arabic shaping. Install an official Pillow wheel.")
+        raise UserError("Pillow needs RAQM/FriBiDi for correct Arabic shaping. On Windows run .venv\\Scripts\\python.exe -m quran_reels.setup_windows, then restart the app. See README.md for other platforms.")
 
 
 def probe(path: Path):
