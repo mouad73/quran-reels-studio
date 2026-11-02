@@ -4,7 +4,7 @@ Local checks performed on Windows on 2026-11-02. Python 3.13, Pillow 12.3.0 with
 
 ## Automated tests
 
-`python -m pytest -q`: **26 passed**.
+`python -m pytest -q`: **39 passed** (including the v0.2 layout controls).
 
 Coverage includes exact edition/ayah joins even with reordered source lists; rejection of missing text/audio, mismatched global ayah IDs, unsupported input ranges and wrong surahs; separation of the API's prefixed unnumbered basmala while preserving Al-Fatiha 1:1; credential-safe network errors; Pexels's current video endpoint; Pixabay attribution; 24-hour stock cache reuse; shaped caption layout in four formats; rejection of oversized captions; sample-counted ayah boundaries; and Streamlit passage loading/review invalidation when the reciter changes.
 
@@ -22,6 +22,10 @@ The tests also check that Windows runtime setup refuses a modified package and e
 - Inspected representative video frames for Arabic shaping, complete visible text, translation, and background composition. Browser check confirmed the local interface and loaded Quran/audio preview; the automated UI test covers the review control.
 
 External media and generated outputs are deliberately excluded from Git. No Facebook/TikTok publishing was performed. Docker and macOS were not run locally; the Dockerfile is provided for reproducible setup and GitHub Actions exercises the automated tests on Windows and Linux.
+
+## Custom-layout checks
+
+The v0.2 checks cover independent visibility/placement of every text element, removal of all overlays, transparent logo resizing/opacity, invalid image rejection, saved-layout validation, overlap reporting and UI-to-export propagation. A live 720×1280 Pexels export with a sample transparent logo, hidden surah/reference labels and custom watermark was rendered and decoded. The preview uses the same overlay composition as the MP4 renderer.
 
 ## Limits of this evidence
 

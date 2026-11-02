@@ -10,11 +10,11 @@ import wave
 from datetime import datetime, timezone
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFont, features
+from PIL import features
 
 from .sources import API, Passage, UserError, download, stock_candidates
+from .layout import FONT, VideoStyle, compose_overlay, load_logo, wrap
 
-FONT = Path(__file__).parent / "fonts" / "Amiri-Regular.ttf"
 SIZES = {"Portrait 720p": (720, 1280), "Portrait 1080p": (1080, 1920), "Square 720p": (720, 720), "Landscape 720p": (1280, 720)}
 
 
@@ -45,57 +45,8 @@ def sha256(path):
         return hashlib.file_digest(stream, "sha256").hexdigest()
 
 
-def wrap(text, font, width, direction):
-    lines, line = [], ""
-    for word in text.split():
-        if font.getlength(word, direction=direction) > width:
-            raise ValueError("word too wide")
-        candidate = (line + " " + word).strip()
-        if line and font.getlength(candidate, direction=direction) > width:
-            lines.append(line)
-            line = word
-        else:
-            line = candidate
-    if line:
-        lines.append(line)
-    return lines
-
-
-def caption_image(passage: Passage, verse, size, destination: Path):
-    width, height = size
-    image = Image.new("RGBA", size, (0, 0, 0, 85))
-    draw = ImageDraw.Draw(image)
-    factor = min(width / 720, height / 1000)
-    max_width, max_height = width * .82, height * .65
-    selected = None
-    for arabic_size in range(round(55 * factor), max(19, round(28 * factor)) - 1, -1):
-        ar = ImageFont.truetype(str(FONT), arabic_size, layout_engine=ImageFont.Layout.RAQM)
-        en = ImageFont.truetype(str(FONT), max(18, round(arabic_size * .53)), layout_engine=ImageFont.Layout.RAQM)
-        try:
-            arabic_lines = wrap(verse.arabic, ar, max_width, "rtl")
-            english_lines = wrap(verse.translation, en, max_width, "ltr")
-        except ValueError:
-            continue
-        lines = [(line, ar, "rtl", "#fff9e8") for line in arabic_lines] + [(line, en, "ltr", "#e3e7e5") for line in english_lines]
-        measured = [(line, font, direction, color, draw.textbbox((0, 0), line, font=font, direction=direction, stroke_width=1)) for line, font, direction, color in lines]
-        gap = round(arabic_size * .44)
-        total = sum(b[4][3] - b[4][1] for b in measured) + gap * max(0, len(lines) - 1)
-        if total <= max_height:
-            selected = measured, gap, total
-            break
-    if selected is None:
-        raise UserError(f"Ayah {verse.reference} is too long for this layout. Try portrait format or disable the translation. Text has not been truncated.")
-    measured, gap, total = selected
-    top = (height - total) / 2
-    draw.rounded_rectangle((width * .05, top - 30, width * .95, top + total + 30), radius=20, fill=(5, 20, 19, 115))
-    for line, font, direction, color, box in measured:
-        x = (width - (box[2] - box[0])) / 2 - box[0]
-        draw.text((x, top - box[1]), line, font=font, direction=direction, fill=color, stroke_width=1, stroke_fill=(0, 0, 0, 200))
-        top += box[3] - box[1] + gap
-    label_font = ImageFont.truetype(str(FONT), max(18, round(25 * factor)))
-    label = f"{passage.name}  |  {verse.reference}"
-    draw.text((width / 2, height * .09), label, font=label_font, anchor="mm", fill="#e4cfa1")
-    draw.text((width / 2, height * .92), "Quran Reels Studio", font=label_font, anchor="mm", fill="#d2dad5")
+def caption_image(passage: Passage, verse, size, destination: Path, style=None, logo=None):
+    image, _ = compose_overlay(passage, verse, size, style, logo)
     image.save(destination)
 
 
@@ -122,8 +73,20 @@ def prepare_audio(passage: Passage, workspace: Path):
     return combined, cues, offset / 48000
 
 
-def generate(passage: Passage, output: Path, *, size=(720, 1280), provider="pexels", key="", query="mountains nature", local_video: Path | None = None, cache_dir: Path | None = None, progress=lambda message: None):
+def generate(passage: Passage, output: Path, *, size=(720, 1280), provider="pexels", key="", query="mountains nature", local_video: Path | None = None, style: VideoStyle | None = None, logo_path: Path | None = None, cache_dir: Path | None = None, progress=lambda message: None):
     check_dependencies()
+    style = style or VideoStyle()
+    style.validate()
+    logo = None
+    if style.logo.visible:
+        if not logo_path or not Path(logo_path).is_file():
+            raise UserError("Upload a logo or turn off Show logo.")
+        if Path(logo_path).stat().st_size > 10 * 1024 * 1024:
+            raise UserError("The logo must be smaller than 10 MB.")
+        logo = load_logo(Path(logo_path).read_bytes())
+    # Validate every ayah's exact layout before downloading media.
+    for verse in passage.verses:
+        compose_overlay(passage, verse, size, style, logo)
     if not passage.verses or len(passage.verses) > 12 or size not in SIZES.values():
         raise UserError("Use 1–12 ayahs and a supported output size.")
     output = Path(output).resolve()
@@ -160,7 +123,7 @@ def generate(passage: Passage, output: Path, *, size=(720, 1280), provider="pexe
         command = ["ffmpeg", "-y", "-v", "error", "-threads", "2", "-i", str(background), "-i", str(audio)]
         for index, verse in enumerate(passage.verses):
             overlay = workspace / f"caption-{index}.png"
-            caption_image(passage, verse, size, overlay)
+            caption_image(passage, verse, size, overlay, style, logo)
             command += ["-i", str(overlay)]
         width, height = size
         filters = [f"[0:v]setpts=PTS-STARTPTS,scale={width}:{height}:force_original_aspect_ratio=increase,crop={width}:{height},setsar=1,fps=30[v0]"]
@@ -175,7 +138,8 @@ def generate(passage: Passage, output: Path, *, size=(720, 1280), provider="pexe
         if (video_stream["width"], video_stream["height"]) != size or abs(float(final["format"]["duration"]) - duration) > .15:
             raise UserError("The rendered video did not pass size or duration validation.")
         run(["ffmpeg", "-v", "error", "-i", str(temporary_video), "-f", "null", "-", "-xerror"])
-        manifest = {"tool": "Quran Reels Studio 0.1.0", "created_at": datetime.now(timezone.utc).isoformat(), "quran_api": API, "arabic_edition": "quran-uthmani", "passage": passage.to_dict(), "cues": cues, "duration": duration, "size": list(size), "background": source, "video_sha256": sha256(temporary_video), "review": "Review Arabic, translation, recitation, background and usage rights before publishing. Timing is per ayah, not per word."}
+        manifest = {"tool": "Quran Reels Studio 0.2.0", "created_at": datetime.now(timezone.utc).isoformat(), "quran_api": API, "arabic_edition": "quran-uthmani", "passage": passage.to_dict(), "cues": cues, "duration": duration, "size": list(size), "layout": style.to_dict(), "logo_sha256": sha256(logo_path) if logo is not None else None, "background": source, "video_sha256": sha256(temporary_video), "review": "Review Arabic, translation, recitation, background and usage rights before publishing. Timing is per ayah, not per word."}
+        (output / "layout.json").write_text(json.dumps(style.to_dict(), ensure_ascii=False, indent=2), encoding="utf-8")
         (output / "sources.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
         credits = f"Quran text and recitation: AlQuran Cloud ({API})\nArabic: quran-uthmani\nReciter edition: {passage.reciter}\nTranslation: {passage.translation_edition or 'none'}\nBackground: {source['provider']}\nCreator: {source.get('creator', 'your own footage')}\nSource: {source.get('source_url', source.get('file_name', ''))}\n\nCheck each provider's current terms and recording/translation permissions before public reuse.\n"
         (output / "credits.txt").write_text(credits, encoding="utf-8")
