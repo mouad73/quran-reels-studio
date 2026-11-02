@@ -1,0 +1,49 @@
+{
+  "url": "https://github.com/mouad73/quran-reels-studio/releases/tag/v0.3.0",
+  "draft": false,
+  "tag": "v0.3.0",
+  "commit": "4e52c431f0033f7a54aae6e017e0b4820e6426ae",
+  "sha256": "069e7d80819841a166082ad2276bd1dae712e8855b964071e70e9f87b8dc69dd",
+  "assets": [
+    {
+      "name": "Quran-Reels-Studio-0.3.0-Windows-x64.zip",
+      "url": "https://github.com/mouad73/quran-reels-studio/releases/download/v0.3.0/Quran-Reels-Studio-0.3.0-Windows-x64.zip",
+      "size": 99016408
+    },
+    {
+      "name": "Quran-Reels-Studio-0.3.0-Windows-x64.zip.sha256",
+      "url": "https://github.com/mouad73/quran-reels-studio/releases/download/v0.3.0/Quran-Reels-Studio-0.3.0-Windows-x64.zip.sha256",
+      "size": 108
+    },
+    {
+      "name": "smoke-result.json",
+      "url": "https://github.com/mouad73/quran-reels-studio/releases/download/v0.3.0/smoke-result.json",
+      "size": 191
+    }
+  ],
+  "archiveAudit": {
+    "files": 6102,
+    "bytes": 99016408,
+    "privateFiles": false,
+    "bundledFFmpeg": false,
+    "fribidiSourceAndRecipe": true,
+    "sha256": "069e7d80819841a166082ad2276bd1dae712e8855b964071e70e9f87b8dc69dd",
+    "sourceCommit": "4e52c431f0033f7a54aae6e017e0b4820e6426ae"
+  },
+  "packagedRuntimeChecks": {
+    "python": "3.13.17",
+    "streamlit": "1.66.1",
+    "arabicShaping": true,
+    "ffmpegEncoding": true,
+    "loopbackServer": true,
+    "minimalSystemPath": true,
+    "unicodeDataPath": true
+  },
+  "automatedTests": 42,
+  "githubTests": "https://github.com/mouad73/quran-reels-studio/actions/runs/41494626351",
+  "githubPackageBuild": "https://github.com/mouad73/quran-reels-studio/actions/runs/41494626568",
+  "bothWorkflowsPassed": true,
+  "liveArticle": "https://techmouad.com/%d8%a5%d9%86%d8%b4%d8%a7%d8%a1-%d9%81%d9%8a%d8%af%d9%8a%d9%88-%d9%82%d8%b1%d8%a2%d9%86/",
+  "toolsPage": "https://techmouad.com/tools/#quran-reels-studio",
+  "rankMathEditorScore": 95
+}

@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-11-02T16:51:18.715Z",
-  "wordCount": 2851,
-  "keywordOccurrences": 31,
+  "checkedAt": "2026-11-02T17:54:38.451Z",
+  "wordCount": 3085,
+  "keywordOccurrences": 35,
   "checks": {
     "keywordInTitle": true,
     "keywordAtTitleStart": true,
@@ -23,6 +23,6 @@
     "shortParagraphs": true
   },
   "allContentChecksPass": true,
-  "rankMathEditorScore": 100,
-  "rankMathStatus": "Read the real editor toolbar, saved the draft, reloaded the editor and observed 100 / 100 again. No score metadata or scoring filters were assigned manually."
+  "rankMathEditorScore": 95,
+  "rankMathStatus": "Observed 95 / 100 in the live WordPress editor after the Windows update and saved through the normal editor. No numeric score was manually assigned."
 }

@@ -6,9 +6,12 @@
   "description": "أداة محلية مفتوحة المصدر لإنشاء فيديو قرآن بتلاوة أصلية وخلفيات وشعار ونصوص قابلة للتخصيص.",
   "url": "https://github.com/mouad73/quran-reels-studio",
   "codeRepository": "https://github.com/mouad73/quran-reels-studio",
-  "programmingLanguage": "Python",
-  "runtimePlatform": "Python 3.11+ and FFmpeg",
-  "version": "0.2.0",
+  "programmingLanguage": [
+    "Python",
+    "C#"
+  ],
+  "runtimePlatform": "Windows x64 portable package, or Python 3.11+ and FFmpeg",
+  "version": "0.3.0",
   "license": "https://github.com/mouad73/quran-reels-studio/blob/c6ef704985ba59363a44e6cc3ba33620badb1a2c/LICENSE",
   "isAccessibleForFree": true,
   "creator": {

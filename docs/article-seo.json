@@ -16,16 +16,16 @@
   "audience": "صناع المحتوى القرآني الذين يريدون أداة محلية مفتوحة المصدر والتحكم في التصميم",
   "searchIntent": "تنزيل أداة مع شرح عملي؛ لا تستهدف وعد تشغيل على الهاتف أو خدمة ويب دون تثبيت",
   "evidenceDate": "2026-11-02",
-  "version": "0.2.0",
-  "sourceCommit": "c6ef704985ba59363a44e6cc3ba33620badb1a2c",
-  "downloadUrl": "https://github.com/mouad73/quran-reels-studio/archive/c6ef704985ba59363a44e6cc3ba33620badb1a2c.zip",
+  "version": "0.3.0",
+  "sourceCommit": "4e52c431f0033f7a54aae6e017e0b4820e6426ae",
+  "downloadUrl": "https://github.com/mouad73/quran-reels-studio/releases/download/v0.3.0/Quran-Reels-Studio-0.3.0-Windows-x64.zip",
   "keywordVolume": "لم يُتحقق من حجم البحث؛ الاختيارات فرضيات مبنية على قصد البحث وخصائص الأداة.",
   "featuredMedia": 1014,
   "categories": [
     51,
     10
   ],
-  "status": "draft",
+  "status": "publish",
   "previousSlug": "quran-reels-studio",
   "tutorial": {
     "durationSeconds": 114.925333,
@@ -36,6 +36,7 @@
     "hasBurnedArabicCaptions": true
   },
   "rankMathFocusKeyword": "إنشاء فيديو قرآن",
-  "scoreVerification": "Verified 100/100 in the WordPress Rank Math editor after saving and reloading, on 2 November 2026.",
-  "rankMathEditorScore": 100
+  "scoreVerification": "Verified 95/100 after the Windows update. All content checks pass; the remaining recommendation is Rank Math Content AI.",
+  "walkthroughSourceCommit": "c6ef704985ba59363a44e6cc3ba33620badb1a2c",
+  "rankMathEditorScore": 95
 }
