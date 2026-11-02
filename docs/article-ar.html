@@ -1,274 +1,475 @@
 <!-- wp:paragraph -->
 <p><strong>Quran Reels Studio أداة مجانية ومفتوحة المصدر لإنشاء فيديو قرآن بخلفية طبيعية، وتلاوة حقيقية، ونص عربي، وترجمة اختيارية لمعاني الآيات.</strong> تعمل على جهازك، وتتيح إضافة شعارك وتغيير موضع كل عنصر أو إخفاءه، ثم تصدير الفيديو بصيغة MP4. تحتاج إلى Python وFFmpeg؛ وللخلفيات تختار مفتاح Pexels أو Pixabay، أو ترفع فيديو تملكه دون مفتاح خلفيات.</p>
 <!-- /wp:paragraph -->
+
 <!-- wp:paragraph -->
-<p>إذا كنت تعيد جمع الصوت والنص والشعار في كل فيديو، فهذا الدليل يشرح مساراً قابلاً للتكرار: اختر آيات كاملة، راجعها، اضبط التصميم، ثم شاهد النتيجة قبل مشاركتها. طورنا الأداة في TechMouad، ونوضح هنا ما اختبرناه وحدود النسخة الحالية، مع الشيفرة المتاحة للمراجعة والتعديل.</p>
+<p>إذا كنت تعيد جمع الصوت والنص والشعار في كل مرة، فهذا الدليل يشرح مسار إنشاء فيديو قرآن قابلاً للتكرار: اختر آيات كاملة، راجعها، اضبط التصميم، ثم شاهد النتيجة قبل مشاركتها. طورنا الأداة في TechMouad، ونوضح هنا ما اختبرناه وحدود النسخة الحالية، مع الشيفرة المتاحة للمراجعة والتعديل.</p>
 <!-- /wp:paragraph -->
+
 <!-- wp:buttons -->
 <div class="wp-block-buttons"><!-- wp:button -->
 <div class="wp-block-button"><a class="wp-block-button__link wp-element-button" id="qrs-download" href="https://github.com/mouad73/quran-reels-studio/archive/c6ef704985ba59363a44e6cc3ba33620badb1a2c.zip">تنزيل الأداة مجاناً من GitHub</a></div>
-<!-- /wp:button --><!-- wp:button {"className":"is-style-outline"} -->
+<!-- /wp:button -->
+
+<!-- wp:button {"className":"is-style-outline"} -->
 <div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="#install">ابدأ خطوات التثبيت</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons -->
+
 <!-- wp:paragraph -->
 <p><strong>النسخة المشروحة:</strong> 0.2.0، والتحقق بتاريخ 2 نوفمبر 2026. رابط التنزيل أعلاه يشير إلى نسخة الشيفرة المستخدمة في هذا الشرح. وللتحديثات اللاحقة راجع <a href="https://github.com/mouad73/quran-reels-studio">المستودع الرئيسي على GitHub</a>.</p>
 <!-- /wp:paragraph -->
+
 <!-- wp:heading -->
 <h2 class="wp-block-heading" id="video-tutorial">شاهد شرح إنشاء فيديو قرآن بشعارك خطوة بخطوة</h2>
 <!-- /wp:heading -->
+
 <!-- wp:paragraph -->
 <p>في هذا الشرح المسجل من الواجهة، نختار خلفية محلية وآيات سورة الإخلاص، ثم نخفي اسم السورة ونضيف شعاراً ونغيّر موضعه وعرضه وشفافيته، قبل إنشاء الفيديو وتنزيله. مدة الشرح نحو دقيقة و55 ثانية. التعليمات مكتوبة بالعربية على الشاشة؛ ويضم مثال النتيجة تلاوة الآيات، دون تعليق صوتي على الخطوات.</p>
 <!-- /wp:paragraph -->
+
 <!-- wp:video {"id":1019,"poster":"https://techmouad.com/wp-content/uploads/2026/11/tutorial-poster.webp","preload":"metadata"} -->
 <figure class="wp-block-video"><video id="qrs-tutorial-player" controls playsinline preload="metadata" poster="https://techmouad.com/wp-content/uploads/2026/11/tutorial-poster.webp" src="https://techmouad.com/wp-content/uploads/2026/11/tutorial-final-ar.mp4" width="1280" height="900" style="width:100%;height:auto"></video><figcaption class="wp-element-caption">تسجيل فعلي للأداة مع تعليمات عربية مكتوبة؛ اختُصرت أوقات الانتظار. استُخدمت خلفية من Pexels عبر الرفع المحلي وشعار توضيحي قابل للاستبدال.</figcaption></figure>
 <!-- /wp:video -->
+
 <!-- wp:paragraph -->
 <p><a href="https://techmouad.com/wp-content/uploads/2026/11/tutorial-final-ar.mp4">تنزيل الشرح بصيغة MP4</a>. لتوفير البيانات، يبدأ تحميل الفيديو عند تشغيله؛ ويمكنك متابعة الخطوات المكتوبة أدناه دون مشاهدته. خلفية المثال من <a href="https://www.pexels.com/video/stunning-mountain-peaks-in-winter-snow-32486336/">Ahmet Mert على Pexels</a>.</p>
 <!-- /wp:paragraph -->
-<!-- wp:list -->
-<ul class="wp-block-list"><li><strong>00:07:</strong> فتح الأداة واختيار مصدر الخلفية.</li><li><strong>00:19:</strong> تحميل الآيات ومراجعة النص والتلاوة.</li><li><strong>00:29:</strong> إخفاء اسم السورة وتخصيص عناصر التصميم.</li><li><strong>00:39:</strong> رفع الشعار وتحريكه وتغيير حجمه وشفافيته.</li><li><strong>01:01:</strong> مراجعة التصميم في المعاينة.</li><li><strong>01:12:</strong> تأكيد المراجعة وإنشاء الفيديو.</li><li><strong>01:27:</strong> تنزيل النتيجة ومشاهدة مثال التصدير.</li></ul>
+
+<!-- wp:list {"className":"wp-block-list"} -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>00:07:</strong> فتح الأداة واختيار مصدر الخلفية.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>00:19:</strong> تحميل الآيات ومراجعة النص والتلاوة.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>00:29:</strong> إخفاء اسم السورة وتخصيص عناصر التصميم.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>00:39:</strong> رفع الشعار وتحريكه وتغيير حجمه وشفافيته.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>01:01:</strong> مراجعة التصميم في المعاينة.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>01:12:</strong> تأكيد المراجعة وإنشاء الفيديو.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>01:27:</strong> تنزيل النتيجة ومشاهدة مثال التصدير.</li>
+<!-- /wp:list-item --></ul>
 <!-- /wp:list -->
+
 <!-- wp:heading -->
 <h2 class="wp-block-heading" id="quick-answer">ما الذي تحتاجه لإنشاء فيديو قرآن بهذه الأداة؟</h2>
 <!-- /wp:heading -->
-<!-- wp:table -->
+
+<!-- wp:table {"hasFixedLayout":false} -->
 <figure class="wp-block-table"><table><thead><tr><th scope="col">العنصر</th><th scope="col">ما توفره النسخة الحالية</th></tr></thead><tbody><tr><td>نوع الأداة</td><td>برنامج محلي بواجهة في المتصفح، مكتوب بـPython وStreamlit</td></tr><tr><td>التشغيل</td><td>Python 3.11 أو أحدث، وFFmpeg مع ffprobe؛ الشرح هنا لـWindows x64</td></tr><tr><td>النص والتلاوة</td><td>AlQuran Cloud؛ دون مفتاح API لهذا المصدر في المسار المستخدم</td></tr><tr><td>الخلفيات</td><td>Pexels أو Pixabay بمفتاحك، أو ملف فيديو محلي تملكه</td></tr><tr><td>التصميم</td><td>شعار، ونص عربي، وترجمة، واسم سورة، ورقم آية، واسم قارئ، وعلامة نصية اختيارية</td></tr><tr><td>الناتج</td><td>MP4 مع ملفات المصادر والاعتمادات وإعدادات التصميم</td></tr><tr><td>الحدود</td><td>من آية إلى 12 آية متتالية؛ حتى ثلاث دقائق، بشرط ملاءمة النص للتخطيط</td></tr><tr><td>التكلفة</td><td>شيفرة مجانية بترخيص MIT؛ استخدام خدمات الخلفيات يخضع لشروط المزود وحصته</td></tr></tbody></table></figure>
 <!-- /wp:table -->
-<!-- wp:paragraph -->
-<p><a href="#video-tutorial">فيديو الشرح</a> · <a href="#tutorial-transcript">نص الشرح</a> · <a href="#install">التثبيت</a> · <a href="#first-video">أول فيديو</a> · <a href="#logo">إضافة الشعار</a> · <a href="#tests">نتائج التجربة</a> · <a href="#problems">حل المشكلات</a> · <a href="#faq">الأسئلة الشائعة</a></p>
-<!-- /wp:paragraph -->
+
+<!-- wp:rank-math/toc-block {"title":"محتويات الدليل","headings":[{"key":"704c5901-f0a9-45d3-91b9-3f30c3011012","content":"شاهد شرح إنشاء فيديو قرآن بشعارك خطوة بخطوة","level":2,"link":"#video-tutorial","disable":false,"isUpdated":false,"isGeneratedLink":true},{"key":"976211dc-a362-41c1-a875-d50b3336d374","content":"ما الذي تحتاجه لإنشاء فيديو قرآن بهذه الأداة؟","level":2,"link":"#quick-answer","disable":false,"isUpdated":false,"isGeneratedLink":true},{"key":"82135a75-60a1-4a99-8807-d25f1d06b90c","content":"لمن يناسب إنشاء فيديو قرآن بهذه الأداة؟","level":2,"link":"#audience","disable":false,"isUpdated":false,"isGeneratedLink":true},{"key":"7f188ce4-71ce-44c1-9090-44b2a6fd48d8","content":"متطلبات إنشاء فيديو قرآن وتثبيت الأداة على Windows","level":2,"link":"#install","disable":false,"isUpdated":false,"isGeneratedLink":true},{"key":"f08c7ea7-3b46-4ab9-86d1-336741307e79","content":"إنشاء فيديو قرآن لأول مرة بخلفية طبيعية","level":2,"link":"#first-video","disable":false,"isUpdated":false,"isGeneratedLink":true},{"key":"8af8f363-e04d-4759-ae76-94ffe1a2fbc5","content":"كيفية إضافة شعار إلى فيديو قرآن وتغيير موضع النصوص","level":2,"link":"#logo","disable":false,"isUpdated":false,"isGeneratedLink":true},{"key":"54c9e111-aa1a-4f85-a062-47442306be1c","content":"نص شرح إنشاء فيديو قرآن: من الخلفية إلى MP4","level":2,"link":"#tutorial-transcript","disable":false,"isUpdated":false,"isGeneratedLink":true},{"key":"24564fdf-79cc-4777-ba10-2ca36ba834aa","content":"3 إعدادات عملية لتصميم فيديو قرآن واضح","level":2,"link":"#design-profiles","disable":false,"isUpdated":false,"isGeneratedLink":true},{"key":"c814d448-a6b1-4216-85d9-d44daaa75101","content":"كيف تحفظ تصميمك لإعادة إنشاء فيديو قرآن؟","level":2,"link":"#reuse-layout","disable":false,"isUpdated":false,"isGeneratedLink":true},{"key":"0a0ccd26-ab95-4288-8e2d-5a95c3c12a1d","content":"إنشاء فيديو قرآن للنشر: قائمة المراجعة النهائية","level":2,"link":"#final-check","disable":false,"isUpdated":false,"isGeneratedLink":true},{"key":"1575cd10-a4d1-4bf8-82b1-63ef47b7106c","content":"إنشاء فيديو قرآن في تجربتنا: ما الذي اختبرناه؟","level":2,"link":"#tests","disable":false,"isUpdated":false,"isGeneratedLink":true},{"key":"c145b3a1-ee3c-4f17-8dbe-7a17cc7120b9","content":"كيف يتزامن نص الآيات مع التلاوة؟","level":2,"link":"#timing","disable":false,"isUpdated":false,"isGeneratedLink":true},{"key":"29e25bb4-c9a4-479d-818e-8ded5e60adc4","content":"الملفات الناتجة والخصوصية وحقوق الاستخدام","level":2,"link":"#files","disable":false,"isUpdated":false,"isGeneratedLink":true},{"key":"562a1d44-1207-4a71-a2b3-6d96f835f4fb","content":"حل المشكلات الشائعة عند إنشاء فيديو قرآن","level":2,"link":"#problems","disable":false,"isUpdated":false,"isGeneratedLink":true},{"key":"4fd03932-9e49-4aa4-984e-42f5d9c8157e","content":"أسئلة شائعة عن إنشاء فيديو قرآن بالأداة","level":2,"link":"#faq","disable":false,"isUpdated":false,"isGeneratedLink":true},{"key":"3cddd610-0ba5-4528-bf81-f8aec4b59184","content":"نزّل أداة إنشاء فيديو قرآن وابدأ بمقطع قصير","level":2,"link":"#download","disable":false,"isUpdated":false,"isGeneratedLink":true},{"key":"49234943-0bbd-4259-8819-8cd35ebe07b4","content":"المصادر ووثائق التشغيل","level":2,"link":"#sources","disable":false,"isUpdated":false,"isGeneratedLink":true}],"listStyle":"ul","titleWrapper":"h2","excludeHeadings":["h3","h4","h5","h6"]} -->
+<div class="wp-block-rank-math-toc-block" id="rank-math-toc"><h2>محتويات الدليل</h2><nav><ul><li class=""><a href="#video-tutorial">شاهد شرح إنشاء فيديو قرآن بشعارك خطوة بخطوة</a></li><li class=""><a href="#quick-answer">ما الذي تحتاجه لإنشاء فيديو قرآن بهذه الأداة؟</a></li><li class=""><a href="#audience">لمن يناسب إنشاء فيديو قرآن بهذه الأداة؟</a></li><li class=""><a href="#install">متطلبات إنشاء فيديو قرآن وتثبيت الأداة على Windows</a></li><li class=""><a href="#first-video">إنشاء فيديو قرآن لأول مرة بخلفية طبيعية</a></li><li class=""><a href="#logo">كيفية إضافة شعار إلى فيديو قرآن وتغيير موضع النصوص</a></li><li class=""><a href="#tutorial-transcript">نص شرح إنشاء فيديو قرآن: من الخلفية إلى MP4</a></li><li class=""><a href="#design-profiles">3 إعدادات عملية لتصميم فيديو قرآن واضح</a></li><li class=""><a href="#reuse-layout">كيف تحفظ تصميمك لإعادة إنشاء فيديو قرآن؟</a></li><li class=""><a href="#final-check">إنشاء فيديو قرآن للنشر: قائمة المراجعة النهائية</a></li><li class=""><a href="#tests">إنشاء فيديو قرآن في تجربتنا: ما الذي اختبرناه؟</a></li><li class=""><a href="#timing">كيف يتزامن نص الآيات مع التلاوة؟</a></li><li class=""><a href="#files">الملفات الناتجة والخصوصية وحقوق الاستخدام</a></li><li class=""><a href="#problems">حل المشكلات الشائعة عند إنشاء فيديو قرآن</a></li><li class=""><a href="#faq">أسئلة شائعة عن إنشاء فيديو قرآن بالأداة</a></li><li class=""><a href="#download">نزّل أداة إنشاء فيديو قرآن وابدأ بمقطع قصير</a></li><li class=""><a href="#sources">المصادر ووثائق التشغيل</a></li></ul></nav></div>
+<!-- /wp:rank-math/toc-block -->
+
 <!-- wp:heading -->
-<h2 class="wp-block-heading" id="audience">لمن يناسب صانع فيديو القرآن هذا؟</h2>
+<h2 class="wp-block-heading" id="audience">لمن يناسب إنشاء فيديو قرآن بهذه الأداة؟</h2>
 <!-- /wp:heading -->
+
 <!-- wp:paragraph -->
 <p>يناسبك إذا أردت إنشاء ريلز قرآنية بتصميم متكرر لقناتك، مع اختيار المقاطع كاملة والتحكم في النصوص والشعار. ويمكن للمطور مراجعة الشيفرة أو تشغيل التصدير من الطرفية بإعدادات محفوظة. تعمل المعالجة على الكمبيوتر بعد تنزيل الملفات اللازمة من مزوديها.</p>
 <!-- /wp:paragraph -->
+
 <!-- wp:paragraph -->
 <p>إذا كنت تريد دمج عشرات المشاهد أو انتقالات ومونتاجاً تفصيلياً، فستحتاج إلى محرر فيديو بجانب الأداة؛ يمكنك الاطلاع على <a href="https://techmouad.com/%d8%a3%d9%81%d8%b6%d9%84-5-%d8%a3%d8%af%d9%88%d8%a7%d8%aa-%d8%aa%d8%ad%d8%b1%d9%8a%d8%b1-%d9%81%d9%8a%d8%af%d9%8a%d9%88-%d9%85%d8%ac%d8%a7%d9%86%d9%8a%d8%a9-%d8%a3%d9%88%d9%86%d9%84%d8%a7%d9%8a%d9%86/">دليل أدوات تحرير الفيديو المجانية أونلاين</a>. أما هذه النسخة فتركز على خلفية فيديو متصلة مع تلاوة ونصوص، وليست تطبيق هاتف أو خدمة توليد مستضافة على موقعنا.</p>
 <!-- /wp:paragraph -->
+
 <!-- wp:heading -->
 <h2 class="wp-block-heading" id="install">متطلبات إنشاء فيديو قرآن وتثبيت الأداة على Windows</h2>
 <!-- /wp:heading -->
+
 <!-- wp:heading {"level":3} -->
 <h3 class="wp-block-heading">1. ثبّت متطلبات التشغيل مرة واحدة</h3>
 <!-- /wp:heading -->
+
 <!-- wp:paragraph -->
 <p>ثبّت <a href="https://www.python.org/downloads/">Python 3.11 أو أحدث</a>، ثم <a href="https://ffmpeg.org/download.html">FFmpeg</a> مع ffprobe، وتأكد من توفر الأوامر في PATH. إذا كان winget متاحاً في Windows، يمكن تثبيت FFmpeg بهذا الأمر، ثم فتح PowerShell من جديد:</p>
 <!-- /wp:paragraph -->
+
 <!-- wp:code -->
 <pre class="wp-block-code" dir="ltr"><code>winget install --id Gyan.FFmpeg --exact</code></pre>
 <!-- /wp:code -->
+
 <!-- wp:paragraph -->
 <p>يمكن التأكد من وجود البرامج قبل المتابعة باستخدام الأوامر التالية. إذا لم يتعرف النظام على أحدها، أكمل تثبيته أو إعداد PATH أولاً:</p>
 <!-- /wp:paragraph -->
+
 <!-- wp:code -->
 <pre class="wp-block-code" dir="ltr"><code>python --version
 ffmpeg -version
 ffprobe -version</code></pre>
 <!-- /wp:code -->
+
 <!-- wp:heading {"level":3} -->
 <h3 class="wp-block-heading">2. نزّل المشروع وشغّل ملف البداية</h3>
 <!-- /wp:heading -->
+
 <!-- wp:paragraph -->
 <p>نزّل <a href="https://github.com/mouad73/quran-reels-studio/archive/c6ef704985ba59363a44e6cc3ba33620badb1a2c.zip">ملف ZIP للنسخة المشروحة</a> وفك الضغط، ثم افتح <code>start-windows.bat</code> داخل مجلد المشروع. ينشئ الملف بيئة Python محلية، ويثبت متطلبات الأداة ويجهز مكتبة FriBiDi اللازمة لتشكيل العربية إذا كانت غائبة. تُحمّل هذه المكتبة من حزمة ثابتة مع التحقق من بصمتها. تحتاج هذه الخطوات إلى الإنترنت أول مرة.</p>
 <!-- /wp:paragraph -->
+
 <!-- wp:paragraph -->
 <p>إذا أردت تنفيذ الخطوات يدوياً، افتح PowerShell داخل مجلد المشروع بعد فك الضغط وشغّل:</p>
 <!-- /wp:paragraph -->
+
 <!-- wp:code -->
 <pre class="wp-block-code" dir="ltr"><code>python -m venv .venv
 .venv\Scripts\python.exe -m pip install -e .
 .venv\Scripts\python.exe -m quran_reels.setup_windows
 .venv\Scripts\python.exe -m streamlit run app.py</code></pre>
 <!-- /wp:code -->
+
 <!-- wp:paragraph -->
 <p>تظهر الواجهة على عنوان محلي مثل <code dir="ltr">http://127.0.0.1:8501</code>؛ افتحه على الجهاز الذي يشغّل البرنامج. الواجهة حالياً بالإنجليزية، وتعرض القرآن بالعربية. أوامر Linux وmacOS وخيار Docker موضحة في <a href="https://github.com/mouad73/quran-reels-studio#install">دليل المشروع</a>؛ لم نجرّب Docker أو macOS محلياً في هذه التجربة.</p>
 <!-- /wp:paragraph -->
+
 <!-- wp:heading -->
 <h2 class="wp-block-heading" id="first-video">إنشاء فيديو قرآن لأول مرة بخلفية طبيعية</h2>
 <!-- /wp:heading -->
-<!-- wp:list {"ordered":true} -->
-<ol class="wp-block-list"><li><strong>اختر مصدر الخلفية.</strong> من Provider اختر Pexels أو Pixabay وأدخل مفتاحك في الحقل المخفي. تحصل عليه من <a href="https://www.pexels.com/api/">Pexels API</a> أو <a href="https://pixabay.com/api/docs/">Pixabay API</a>. وللفيديو المحلي اختر My own video؛ لا تحتاج عندها إلى مفتاح خلفيات.</li><li><strong>اكتب وصفاً بسيطاً للمشهد.</strong> مثل <code dir="ltr">mountains nature</code> أو <code dir="ltr">ocean waves</code>. يبحث البرنامج عن مقطع أطول من التلاوة، ثم يقص إطار الصورة ليلائم المقاس المختار.</li><li><strong>حدد السورة والآيات والقارئ.</strong> ابدأ بسورة الإخلاص 112، الآيات 1–4، وقارئ Alafasy، ثم اختر معنى الآيات بالإنجليزية أو الفرنسية، أو العربية فقط.</li><li><strong>راجع النص والصوت.</strong> اضغط Load passage for review، واقرأ النص والترجمة واستمع إلى التسجيل. لا تتجاوز هذه المراجعة اعتماداً على نجاح فحص تقني.</li><li><strong>اضبط التصميم.</strong> افتح Design your video، وحدد ما تريد عرضه وموضعه، ثم راجع Layout preview. صيغة Portrait 720p مناسبة كبداية لتجربة التصدير.</li><li><strong>صدّر وشاهد النتيجة.</strong> فعّل تأكيد مراجعة النص واضغط Generate video. شاهد الفيديو كاملاً، ثم نزّل MP4 أو الحزمة التي تضم الفيديو ومصادره وإعداداته.</li></ol>
+
+<!-- wp:list {"ordered":true,"className":"wp-block-list"} -->
+<ol class="wp-block-list"><!-- wp:list-item -->
+<li><strong>اختر مصدر الخلفية.</strong> من Provider اختر Pexels أو Pixabay وأدخل مفتاحك في الحقل المخفي. تحصل عليه من <a href="https://www.pexels.com/api/">Pexels API</a> أو <a href="https://pixabay.com/api/docs/">Pixabay API</a>. وللفيديو المحلي اختر My own video؛ لا تحتاج عندها إلى مفتاح خلفيات.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>اكتب وصفاً بسيطاً للمشهد.</strong> مثل <code dir="ltr">mountains nature</code> أو <code dir="ltr">ocean waves</code>. يبحث البرنامج عن مقطع أطول من التلاوة، ثم يقص إطار الصورة ليلائم المقاس المختار.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>حدد السورة والآيات والقارئ.</strong> ابدأ بسورة الإخلاص 112، الآيات 1–4، وقارئ Alafasy، ثم اختر معنى الآيات بالإنجليزية أو الفرنسية، أو العربية فقط.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>راجع النص والصوت.</strong> اضغط Load passage for review، واقرأ النص والترجمة واستمع إلى التسجيل. لا تتجاوز هذه المراجعة اعتماداً على نجاح فحص تقني.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>اضبط التصميم.</strong> افتح Design your video، وحدد ما تريد عرضه وموضعه، ثم راجع Layout preview. صيغة Portrait 720p مناسبة كبداية لتجربة التصدير.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>صدّر وشاهد النتيجة.</strong> فعّل تأكيد مراجعة النص واضغط Generate video. شاهد الفيديو كاملاً، ثم نزّل MP4 أو الحزمة التي تضم الفيديو ومصادره وإعداداته.</li>
+<!-- /wp:list-item --></ol>
 <!-- /wp:list -->
+
+<!-- wp:image {"id":1022,"sizeSlug":"full","linkDestination":"none"} -->
+<figure class="wp-block-image size-full"><img src="https://techmouad.com/wp-content/uploads/2026/11/passage-review.webp" alt="واجهة مراجعة آيات الإخلاص وتشغيل التلاوة والترجمة قبل إنشاء فيديو قرآن" class="wp-image-1022" width="1280" height="720" loading="lazy" decoding="async"/><figcaption class="wp-element-caption">لقطة فعلية من جلسة الشرح: راجع الآيات والمعنى واستمع إلى التلاوة قبل الانتقال إلى التصميم.</figcaption></figure>
+<!-- /wp:image -->
+
 <!-- wp:paragraph -->
 <p>يجب أن تكون الخلفية طويلة بما يكفي لتغطية التسجيل كاملاً. لا تكرر الأداة الخلفية تلقائياً ولا تقطع التلاوة أو تسرّعها لتناسب مقطعاً قصيراً. وإذا لم تجد مشهداً مناسباً، جرّب كلمات بحث أخرى أو ارفع ملفاً أطول.</p>
 <!-- /wp:paragraph -->
+
 <!-- wp:heading -->
 <h2 class="wp-block-heading" id="logo">كيفية إضافة شعار إلى فيديو قرآن وتغيير موضع النصوص</h2>
 <!-- /wp:heading -->
+
 <!-- wp:paragraph -->
 <p>افتح Your logo وارفع شعاراً بصيغة PNG أو JPEG أو WebP؛ يُفضّل PNG شفافاً. الحد هو 10 ميغابايت و16 مليون بكسل. فعّل Show logo، ثم حدد الموضع الأفقي والعمودي وعرض الشعار ودرجة ظهوره. يحتفظ الشعار بنسب أبعاده، مع حد أقصى لارتفاعه يساوي 35% من الإطار.</p>
 <!-- /wp:paragraph -->
+
 <!-- wp:image {"id":1015,"width":"319px","sizeSlug":"full","linkDestination":"none","align":"center"} -->
 <figure class="wp-block-image aligncenter size-full is-resized"><img src="https://techmouad.com/wp-content/uploads/2026/11/logo-controls.webp" alt="إنشاء فيديو قرآن بشعارك: إعدادات رفع الشعار وموضعه وحجمه وشفافيته" class="wp-image-1015" width="319" height="588" style="width:319px;height:auto" loading="lazy" decoding="async"/><figcaption class="wp-element-caption">لقطة فعلية من الأداة: التحكم في ظهور الشعار وموضعه وحجمه وشفافيته.</figcaption></figure>
 <!-- /wp:image -->
+
 <!-- wp:paragraph -->
 <p>يمكنك إظهار أو إخفاء كل عنصر بشكل مستقل: النص العربي، والترجمة، واسم السورة، ورقم الآية، واسم القارئ، والعلامة النصية. غيّر العلامة الافتراضية إلى اسم قناتك أو أخفها. وللنصوص توجد إعدادات الموضع والحجم وأقصى عرض، إضافة إلى تعتيم الخلفية وإظهار لوحات النص أو إخفائها.</p>
 <!-- /wp:paragraph -->
+
 <!-- wp:paragraph -->
 <p><strong>معنى المواضع:</strong> 0 يعني اليسار أو الأعلى، و50 يضع العنصر في الوسط، و100 يحاذيه مع اليمين أو الأسفل، وفق المساحة المتاحة له. لذلك يبقى النص أو الشعار داخل حدود الفيديو. راجع تنبيهات التداخل إذا وضعت عنصرين فوق بعضهما.</p>
 <!-- /wp:paragraph -->
+
 <!-- wp:image {"id":1016,"width":"360px","sizeSlug":"full","linkDestination":"none","align":"center"} -->
 <figure class="wp-block-image aligncenter size-full is-resized"><img src="https://techmouad.com/wp-content/uploads/2026/11/layout-preview.webp" alt="إنشاء فيديو قرآن: معاينة آية وترجمتها مع شعار توضيحي قبل التصدير" class="wp-image-1016" width="360" height="640" style="width:360px;height:auto" loading="lazy" decoding="async"/><figcaption class="wp-element-caption">معاينة على خلفية توضيحية؛ الخلفية في التصدير تكون الفيديو الذي تختاره. الشعار واسم القناة مثالان قابلان للتغيير.</figcaption></figure>
 <!-- /wp:image -->
+
 <!-- wp:paragraph -->
 <p>تستخدم المعاينة خلفية توضيحية ونفس شيفرة التخطيط المستخدمة في التصدير. اختر Preview ayah لمراجعة أكثر من آية، لأن طول النص يتغير. وبعد تعديل الإعدادات اضغط Generate video مجدداً؛ مشغّل النتيجة يعرض آخر فيديو جرى إنشاؤه، وليس معاينة متحركة للتغييرات الجديدة.</p>
 <!-- /wp:paragraph -->
+
 <!-- wp:heading -->
-<h2 class="wp-block-heading" id="tutorial-transcript">نص الشرح المسجل: من الخلفية إلى ملف MP4</h2>
+<h2 class="wp-block-heading" id="tutorial-transcript">نص شرح إنشاء فيديو قرآن: من الخلفية إلى MP4</h2>
 <!-- /wp:heading -->
+
 <!-- wp:paragraph -->
-<p>يبدأ التسجيل بعد تثبيت متطلبات الأداة وفتح الواجهة محلياً. لا يعرض الفيديو تثبيت Python أو FFmpeg من البداية؛ لذلك استخدم قسم التثبيت إن كانت هذه أول مرة. المثال يستخدم My own video بدلاً من مفتاح Pexels، مع بقاء خيار الخدمات الأخرى متاحاً عندما تملك مفاتيحها. هذه هي الخطوات التي تظهر في التسجيل:</p>
+<p>يبدأ تسجيل إنشاء فيديو قرآن بعد تثبيت متطلبات الأداة وفتح الواجهة محلياً. لا يعرض الفيديو تثبيت Python أو FFmpeg من البداية؛ لذلك استخدم قسم التثبيت إن كانت هذه أول مرة. المثال يستخدم My own video بدلاً من مفتاح Pexels، مع بقاء خيار الخدمات الأخرى متاحاً عندما تملك مفاتيحها. هذه هي الخطوات التي تظهر في التسجيل:</p>
 <!-- /wp:paragraph -->
-<!-- wp:list -->
-<ul class="wp-block-list"><li><strong>فتح التطبيق واختيار الخلفية:</strong> نعرض قائمة Provider، ثم نختار My own video ونرفع ملف طبيعة. يجب أن تكون مدته أطول من التلاوة. لا تحتاج هذه الخطوة إلى مفتاح مزود خلفيات، ولا يحوّل البرنامج الملف إلى مشهد مولّد بالذكاء الاصطناعي.</li><li><strong>تحديد المحتوى:</strong> نستخدم سورة الإخلاص 112، من الآية الأولى إلى الرابعة، وتلاوة العفاسي والمعنى الإنجليزي ومقاس Portrait 720p. يظهر النص بعد الضغط على Load passage for review، ويمكن تشغيل تسجيل كل آية من معاينتها.</li><li><strong>اختيار العناصر الظاهرة:</strong> نفتح Surah name ونلغي Show surah name. يختفي اسم السورة من التصميم، بينما تبقى الآيات والترجمة والعناصر التي لم نخفها. لا يحذف هذا الاختيار بيانات السورة من ملف المصادر.</li><li><strong>إضافة هوية القناة:</strong> نرفع شعار PNG توضيحياً، ونحركه إلى اليسار، ثم نغيّر عرضه إلى 16% وشفافيته إلى 80%. نكتب TechMouad في حقل العلامة النصية. يمكنك استخدام اسمك وشعارك أو إخفاء العلامة بالكامل.</li><li><strong>المراجعة ثم التصدير:</strong> نكبّر المعاينة للتأكد من موضع العناصر، ونفعّل تأكيد مراجعة النص، ثم نضغط Generate video. يحمّل البرنامج التلاوة ويضبط التوقيت ويعالج الخلفية قبل إظهار النتيجة. لا تمثل سرعة المونتاج سرعة كل جهاز.</li><li><strong>الحفظ:</strong> يظهر Download MP4 للفيديو وحده، وDownload video + sources + layout للحزمة التي تضم المصدر والإعدادات. وفي نهاية الشرح نعرض الفيديو الناتج من الجلسة نفسها مع تلاوته. احتفظ بالحزمة لتستطيع الرجوع إلى الآيات والمزود وإعدادات التصميم.</li></ul>
+
+<!-- wp:list {"className":"wp-block-list"} -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>فتح التطبيق واختيار الخلفية:</strong> نعرض قائمة Provider، ثم نختار My own video ونرفع ملف طبيعة. يجب أن تكون مدته أطول من التلاوة. لا تحتاج هذه الخطوة إلى مفتاح مزود خلفيات، ولا يحوّل البرنامج الملف إلى مشهد مولّد بالذكاء الاصطناعي.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>تحديد المحتوى:</strong> نستخدم سورة الإخلاص 112، من الآية الأولى إلى الرابعة، وتلاوة العفاسي والمعنى الإنجليزي ومقاس Portrait 720p. يظهر النص بعد الضغط على Load passage for review، ويمكن تشغيل تسجيل كل آية من معاينتها.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>اختيار العناصر الظاهرة:</strong> نفتح Surah name ونلغي Show surah name. يختفي اسم السورة من التصميم، بينما تبقى الآيات والترجمة والعناصر التي لم نخفها. لا يحذف هذا الاختيار بيانات السورة من ملف المصادر.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>إضافة هوية القناة:</strong> نرفع شعار PNG توضيحياً، ونحركه إلى اليسار، ثم نغيّر عرضه إلى 16% وشفافيته إلى 80%. نكتب TechMouad في حقل العلامة النصية. يمكنك استخدام اسمك وشعارك أو إخفاء العلامة بالكامل.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>المراجعة ثم التصدير:</strong> نكبّر المعاينة للتأكد من موضع العناصر، ونفعّل تأكيد مراجعة النص، ثم نضغط Generate video. يحمّل البرنامج التلاوة ويضبط التوقيت ويعالج الخلفية قبل إظهار النتيجة. لا تمثل سرعة المونتاج سرعة كل جهاز.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>الحفظ:</strong> يظهر Download MP4 للفيديو وحده، وDownload video + sources + layout للحزمة التي تضم المصدر والإعدادات. وفي نهاية الشرح نعرض الفيديو الناتج من الجلسة نفسها مع تلاوته. احتفظ بالحزمة لتستطيع الرجوع إلى الآيات والمزود وإعدادات التصميم.</li>
+<!-- /wp:list-item --></ul>
 <!-- /wp:list -->
+
 <!-- wp:paragraph -->
 <p>قد تبدو بعض الأزرار في مكان مختلف على شاشة أصغر أو إصدار أحدث. اعتمد أسماء الحقول والخطوات، وراجع المعاينة بعد كل تغيير. إذا غيّرت التصميم بعد إنشاء الفيديو، لا تفترض أن المشغّل حدّث النتيجة؛ اضغط Generate video مجدداً ثم افحص الملف الجديد. وتبقى مشاركة الفيديو على حسابات التواصل خطوة يدوية منفصلة.</p>
 <!-- /wp:paragraph -->
+
 <!-- wp:heading -->
 <h2 class="wp-block-heading" id="design-profiles">3 إعدادات عملية لتصميم فيديو قرآن واضح</h2>
 <!-- /wp:heading -->
+
 <!-- wp:heading {"level":3} -->
 <h3 class="wp-block-heading">تصميم بسيط يركز على الآية</h3>
 <!-- /wp:heading -->
+
 <!-- wp:paragraph -->
 <p>ابدأ بإظهار النص العربي فقط، وأخف الترجمة إذا لم تكن لازمة لجمهورك. يمكنك إبقاء مرجع الآية صغيراً وإخفاء اسم القارئ أو العلامة النصية حسب اختيارك. استخدم خلفية هادئة، ثم جرّب تعتيماً خفيفاً يساعد الحروف على الظهور دون إخفاء المشهد تماماً. اعرض كل آية في المعاينة قبل التصدير؛ فالآية القصيرة التي تبدو واضحة لا تثبت أن الآية الأطول ستناسب المساحة نفسها. لا تستخدم تصغيراً شديداً لمجرد وضع المزيد من العناصر.</p>
 <!-- /wp:paragraph -->
+
 <!-- wp:heading {"level":3} -->
 <h3 class="wp-block-heading">تصميم عربي مع ترجمة لمعاني الآيات</h3>
 <!-- /wp:heading -->
+
 <!-- wp:paragraph -->
 <p>اترك مساحة مستقلة للنص العربي وأخرى للترجمة، واستخدم مواضع متباعدة بما يكفي لطول الآية. زد عرض مساحة النص قبل اللجوء إلى تصغير الخط. المقاس العمودي يعطي عادة مساحة أكبر لترتيب السطور من المقاس المربع، لكن الحكم النهائي يكون من المعاينة الفعلية. تأكد من أن المتابع يستطيع قراءة المعنى أثناء مدة تسجيل الآية. وإذا لم يلائم النص مساحة مقروءة، غيّر التخطيط أو اختيار الترجمة بدلاً من حذف كلمات أو قطع التلاوة.</p>
 <!-- /wp:paragraph -->
+
 <!-- wp:heading {"level":3} -->
 <h3 class="wp-block-heading">تصميم يحمل شعار القناة</h3>
 <!-- /wp:heading -->
+
 <!-- wp:paragraph -->
 <p>اختر شعاراً شفافاً واضح الحدود وضعه بعيداً عن الآية والترجمة. ابدأ بحجم صغير ثم زد العرض تدريجياً حتى يبقى الشعار مقروءاً ولا يهيمن على الشاشة. يمكن استخدام شفافية أخف إذا كانت الخلفية مزدحمة، مع التأكد من أن الشعار لم يصبح غير ظاهر. احتفظ بمكان ثابت له بين المقاطع لتوحيد هوية القناة، وافحص موضعه أمام مناطق المشهد المضيئة والداكنة. راعِ أيضاً أن واجهات منصات التواصل قد تغطي أجزاء من الحواف، حتى عندما يكون العنصر داخل الفيديو نفسه.</p>
 <!-- /wp:paragraph -->
+
 <!-- wp:heading -->
-<h2 class="wp-block-heading" id="reuse-layout">كيف تحفظ التصميم وتكرره في فيديو جديد؟</h2>
+<h2 class="wp-block-heading" id="reuse-layout">كيف تحفظ تصميمك لإعادة إنشاء فيديو قرآن؟</h2>
 <!-- /wp:heading -->
+
 <!-- wp:paragraph -->
 <p>بعد الوصول إلى مواضع مناسبة، نزّل layout.json من Save layout settings أو احتفظ به من حزمة التصدير. يساعدك هذا الملف على إعادة التصميم من الطرفية دون ضبط كل منزلق من البداية. احتفظ بصورة شعارك محلياً أيضاً؛ الحزمة لا تضم صورة الشعار الأصلية، وحفظ بصمته لا يعيد إنشاء الصورة أو ينزّلها لاحقاً. ولا تحتاج إلى وضع مفتاحك في ملف التصميم أو في أمر الطرفية؛ تبقى مفاتيح الخلفيات في بيئتك المحلية إذا اخترت استخدامها.</p>
 <!-- /wp:paragraph -->
+
 <!-- wp:code -->
 <pre class="wp-block-code" dir="ltr"><code>.venv\Scripts\python.exe -m quran_reels.cli --surah 112 --start 1 --end 4 --background "C:\Videos\nature.mp4" --layout "C:\Videos\layout.json" --logo "C:\Videos\logo.png" --output "output\new-video"</code></pre>
 <!-- /wp:code -->
+
 <!-- wp:paragraph -->
 <p>الأمر مثال لـPowerShell في Windows: استبدل مسارات الخلفية والتصميم والشعار بملفاتك الفعلية. اختر مجلد إخراج جديداً في كل تجربة، لأن البرنامج يرفض استبدال فيديو موجود. إذا كان الشعار مخفياً في الإعدادات فلن يظهر لمجرد تحديد مساره؛ غيّر ظهوره في التصميم أولاً. وراجع حدود الخلفية والنص مرة أخرى عند الانتقال إلى آيات مختلفة، لأن حفظ المواضع لا يضمن ملاءمة كل محتوى لاحق.</p>
 <!-- /wp:paragraph -->
+
 <!-- wp:heading -->
-<h2 class="wp-block-heading" id="final-check">قائمة قصيرة قبل نشر الفيديو الناتج</h2>
+<h2 class="wp-block-heading" id="final-check">إنشاء فيديو قرآن للنشر: قائمة المراجعة النهائية</h2>
 <!-- /wp:heading -->
-<!-- wp:list -->
-<ul class="wp-block-list"><li>شاهد الملف كاملاً بعد التصدير، وتحقق من بداية كل آية ونهايتها وعدم انقطاع التسجيل.</li><li>قارن النص العربي والترجمة بالمصدر المختار، وافحص التشكيل واتجاه الحروف ومواضع السطور.</li><li>تأكد من أن الشعار والعلامة النصية لا يغطيان الآية أو ترجمتها، وجرّب المشاهدة على شاشة هاتف.</li><li>افحص ملاءمة الخلفية للمحتوى، ولا تعتبر كلمة nature أو نجاح البحث فحصاً لمحتوى المشهد.</li><li>احتفظ بملفات sources.json وcredits.txt وlayout.json، وراجع شروط استخدام التسجيل والترجمة والخلفية.</li><li>استخدم نسخة جديدة عند تعديل التصميم، ثم ارفعها يدوياً مع وصف مناسب ومتطلبات المنصة الحالية.</li></ul>
+
+<!-- wp:list {"className":"wp-block-list"} -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>شاهد الملف كاملاً بعد التصدير، وتحقق من بداية كل آية ونهايتها وعدم انقطاع التسجيل.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>قارن النص العربي والترجمة بالمصدر المختار، وافحص التشكيل واتجاه الحروف ومواضع السطور.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>تأكد من أن الشعار والعلامة النصية لا يغطيان الآية أو ترجمتها، وجرّب المشاهدة على شاشة هاتف.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>افحص ملاءمة الخلفية للمحتوى، ولا تعتبر كلمة nature أو نجاح البحث فحصاً لمحتوى المشهد.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>احتفظ بملفات sources.json وcredits.txt وlayout.json، وراجع شروط استخدام التسجيل والترجمة والخلفية.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>استخدم نسخة جديدة عند تعديل التصميم، ثم ارفعها يدوياً مع وصف مناسب ومتطلبات المنصة الحالية.</li>
+<!-- /wp:list-item --></ul>
 <!-- /wp:list -->
+
 <!-- wp:heading -->
-<h2 class="wp-block-heading" id="tests">ماذا اختبرنا فعلياً في TechMouad؟</h2>
+<h2 class="wp-block-heading" id="tests">إنشاء فيديو قرآن في تجربتنا: ما الذي اختبرناه؟</h2>
 <!-- /wp:heading -->
+
 <!-- wp:paragraph -->
 <p>في 2 نوفمبر 2026 اختبرنا المسارات التالية على Windows، باستخدام ملفات نص وصوت من المصدر وخلفيات من المزودين، ثم تحقق البرنامج من أبعاد الفيديو ومدته وفكّه كاملاً عبر FFmpeg. هذه نتائج أمثلة محددة، وليست وعداً بأن كل آية تناسب كل تخطيط:</p>
 <!-- /wp:paragraph -->
-<!-- wp:table -->
+
+<!-- wp:table {"hasFixedLayout":false} -->
 <figure class="wp-block-table"><table><thead><tr><th scope="col">التجربة</th><th scope="col">الإعداد</th><th scope="col">النتيجة الموثقة</th></tr></thead><tbody><tr><td>Pexels</td><td>الإخلاص 112:1–4، تلاوة العفاسي، معنى إنجليزي</td><td>720×1280، مدة تقارب 13.1 ثانية</td></tr><tr><td>Pixabay</td><td>الشرح 94:5–6، تلاوة العفاسي، معنى إنجليزي</td><td>720×1280، مدة تقارب 8.5 ثانية</td></tr><tr><td>خلفية محلية</td><td>الإخلاص 112:2، تلاوة الحصري، معنى فرنسي</td><td>720×720، مدة تقارب خمس ثوانٍ؛ مجلد ناتج باسم عربي</td></tr><tr><td>شعار وتخطيط مخصص</td><td>شعار توضيحي شفاف، إخفاء اسم السورة والمرجع، تغيير العلامة النصية</td><td>نجح تصدير 720×1280 وفحص إطارات ممثلة منه</td></tr><tr><td>اختبارات المشروع</td><td>اتساق البيانات، تخطيط العربية، الشعار، المواضع وحالة الواجهة</td><td>39 اختباراً ناجحاً، بما في ذلك تشغيلها في GitHub على Windows وLinux</td></tr></tbody></table></figure>
 <!-- /wp:table -->
+
 <!-- wp:paragraph -->
 <p>يمكن مراجعة <a href="https://github.com/mouad73/quran-reels-studio/blob/c6ef704985ba59363a44e6cc3ba33620badb1a2c/docs/VALIDATION.md">سجل الاختبارات وحدوده</a> و<a href="https://github.com/mouad73/quran-reels-studio/actions/runs/41456761075">تشغيل GitHub Actions للنسخة المشروحة</a>. لم ننشر الفيديوهات آلياً على منصات التواصل، ولم نجرّب كل تسجيل وكل آية. ولا تعادل اختبارات تطابق أرقام الآيات مراجعة شرعية أو لغوية متخصصة.</p>
 <!-- /wp:paragraph -->
+
 <!-- wp:heading -->
 <h2 class="wp-block-heading" id="timing">كيف يتزامن نص الآيات مع التلاوة؟</h2>
 <!-- /wp:heading -->
+
 <!-- wp:paragraph -->
-<p>يعتمد التوقيت على تسجيل كل آية بعد فك الصوت إلى صيغة موحدة وحساب عيناته. تظهر الآية كاملة خلال مقطعها، ثم ينتقل النص إلى الآية التالية. لا تبرز الأداة كل كلمة أثناء نطقها، ولا تولّد تلاوة أو ترجمة بالذكاء الاصطناعي. وتُحفظ نسخة النص الخام ومعلومات المصدر في ملف التصدير.</p>
+<p>عند إنشاء فيديو قرآن، يعتمد التوقيت على تسجيل كل آية بعد فك الصوت إلى صيغة موحدة وحساب عيناته. تظهر الآية كاملة خلال مقطعها، ثم ينتقل النص إلى الآية التالية. لا تبرز الأداة كل كلمة أثناء نطقها، ولا تولّد تلاوة أو ترجمة بالذكاء الاصطناعي. وتُحفظ نسخة النص الخام ومعلومات المصدر في ملف التصدير.</p>
 <!-- /wp:paragraph -->
+
 <!-- wp:paragraph -->
 <p>عندما يعيد مصدر النص بسملة افتتاحية غير مرقمة قبل آية أولى من سورة أخرى، تفصلها الأداة عن الآية المرقمة وتحتفظ بها في سجل المصدر. تبقى الفاتحة 1:1 كما هي. التسجيل الصوتي محفوظ كما يقدمه المصدر؛ استمع إلى الافتتاح وإلى نهاية كل آية قبل النشر.</p>
 <!-- /wp:paragraph -->
+
 <!-- wp:heading -->
 <h2 class="wp-block-heading" id="files">الملفات الناتجة والخصوصية وحقوق الاستخدام</h2>
 <!-- /wp:heading -->
-<!-- wp:table -->
+
+<!-- wp:table {"hasFixedLayout":false} -->
 <figure class="wp-block-table"><table><thead><tr><th scope="col">الملف</th><th scope="col">وظيفته</th></tr></thead><tbody><tr><td>video.mp4</td><td>الفيديو النهائي؛ يُزال الصوت الأصلي للخلفية وتوضع التلاوة</td></tr><tr><td>sources.json</td><td>النصوص والنسخ وروابط الصوت العامة وتوقيت الآيات ومصدر الخلفية والإعدادات والبصمات</td></tr><tr><td>credits.txt</td><td>معلومات المصادر والاعتمادات التي تحتفظ بها مع الفيديو</td></tr><tr><td>layout.json</td><td>إعدادات ظهور العناصر ومواضعها وأحجامها، لإعادة استخدامها من الطرفية</td></tr></tbody></table></figure>
 <!-- /wp:table -->
+
 <!-- wp:paragraph -->
 <p>يحفظ البرنامج كل تشغيل ناجح داخل مجلد جديد في output. ويمكن تنزيل إعدادات التصميم وحدها من Save layout settings. لا تضم الحزمة صورة الشعار الأصلية، بل تسجل بصمتها عند استخدامها. ولمن يريد فحص قائمة ملفات أي حزمة قبل التعامل معها، يتوفر <a href="https://techmouad.com/zip-checker/">فاحص ملفات ZIP في TechMouad</a>؛ هذا الفحص لا يشغّل الأداة ولا يغني عن مراجعة المصدر.</p>
 <!-- /wp:paragraph -->
+
 <!-- wp:paragraph -->
 <p>المفتاح الذي تدخله في الواجهة يُرسل إلى مزود الخلفية المختار، وطلبات النص والصوت تذهب إلى AlQuran Cloud. لا تُصدّر الأداة المفاتيح ضمن ملفات الفيديو. ويمكن حفظ مفتاحك في .env محلي مستثنى من Git؛ احتفظ به لنفسك. تبقى النتائج على جهازك حتى تحذفها، وتُحفظ نتائج بحث الخلفيات محلياً لمدة 24 ساعة.</p>
 <!-- /wp:paragraph -->
+
 <!-- wp:paragraph -->
 <p>شيفرة الأداة الأصلية بترخيص MIT، والخط المرفق بترخيصه المفتوح. أما التسجيلات والترجمات والخلفيات فتخضع لشروط أصحابها ومزوديها. راجع صلاحية استخدامها ونشرها، واحتفظ بالاعتمادات المناسبة. صيغة الفيديو العمودية وحدها لا تضمن قبول المنصات أو تحقيق دخل منها.</p>
 <!-- /wp:paragraph -->
+
 <!-- wp:heading -->
 <h2 class="wp-block-heading" id="problems">حل المشكلات الشائعة عند إنشاء فيديو قرآن</h2>
 <!-- /wp:heading -->
-<!-- wp:table -->
+
+<!-- wp:table {"hasFixedLayout":false} -->
 <figure class="wp-block-table"><table><thead><tr><th scope="col">المشكلة</th><th scope="col">ما الذي تجربه؟</th></tr></thead><tbody><tr><td>FFmpeg أو ffprobe غير موجود</td><td>تحقق من التثبيت وPATH، ثم افتح PowerShell من جديد وأعد فحص الأوامر</td></tr><tr><td>العربية لا تعمل أو تظهر رسالة RAQM/FriBiDi</td><td>نفّذ أمر quran_reels.setup_windows ببايثون البيئة المحلية، ثم أعد تشغيل التطبيق؛ راجع README إذا استمر الخطأ</td></tr><tr><td>لا توجد خلفية بطول مناسب</td><td>جرّب بحثاً آخر أو فيديو محلياً أطول؛ البحث يفحص أول 30 نتيجة</td></tr><tr><td>آية طويلة لا تلائم الشاشة</td><td>زد عرض النص، أو خفّض حجمه، أو جرّب Portrait أو أخف الترجمة؛ لا تُحذف الكلمات لتناسب الإطار</td></tr><tr><td>النص أو الشعار يتداخلان</td><td>اختر Preview ayah وعدّل المواضع، ثم أنشئ الفيديو مجدداً</td></tr><tr><td>المفتاح مرفوض أو انتهت الحصة</td><td>راجع مفتاح المزود وصلاحياته وحصته؛ يمكن اختيار خلفية محلية دون مفتاح</td></tr></tbody></table></figure>
 <!-- /wp:table -->
+
 <!-- wp:heading -->
-<h2 class="wp-block-heading" id="faq">أسئلة شائعة عن Quran Reels Studio</h2>
+<h2 class="wp-block-heading" id="faq">أسئلة شائعة عن إنشاء فيديو قرآن بالأداة</h2>
 <!-- /wp:heading -->
+
 <!-- wp:heading {"level":3} -->
 <h3 class="wp-block-heading">هل يمكن إنشاء فيديو قرآن مجاناً؟</h3>
 <!-- /wp:heading -->
+
 <!-- wp:paragraph -->
 <p>نعم، شيفرة Quran Reels Studio مجانية، ولا تفرض الأداة رسماً للتصدير. تحتاج إلى جهاز ومتطلبات التشغيل، وإلى مراعاة شروط وحصص خدمات الخلفيات إذا اخترتها. استخدام فيديو تملكه يلغي الحاجة إلى مفتاح خلفيات.</p>
 <!-- /wp:paragraph -->
+
 <!-- wp:heading {"level":3} -->
 <h3 class="wp-block-heading">هل أحتاج إلى مفتاح OpenAI أو خدمة ذكاء اصطناعي؟</h3>
 <!-- /wp:heading -->
+
 <!-- wp:paragraph -->
 <p>لا يتطلب إنشاء فيديو قرآن هنا خدمة ذكاء اصطناعي؛ تجمع الأداة تسجيل التلاوة والنص الموجودين لدى المصدر مع الخلفية، ولا تولّد صوت قارئ اصطناعياً أو ترجمة آلية. يكفي مفتاح Pexels أو Pixabay للخلفيات، أو فيديو محلي بلا هذا المفتاح.</p>
 <!-- /wp:paragraph -->
+
 <!-- wp:heading {"level":3} -->
 <h3 class="wp-block-heading">هل يمكن حذف اسم السورة أو العلامة المائية؟</h3>
 <!-- /wp:heading -->
+
 <!-- wp:paragraph -->
 <p>نعم. من Design your video يمكنك إخفاء اسم السورة ورقم الآية وكل عنصر نصي على حدة، وتغيير العلامة النصية الافتراضية إلى اسم قناتك أو إخفائها. ويمكن أيضاً إضافة شعارك وتحديد موضعه وحجمه وشفافيته.</p>
 <!-- /wp:paragraph -->
+
 <!-- wp:heading {"level":3} -->
 <h3 class="wp-block-heading">هل تعمل الأداة على الهاتف دون تثبيت؟</h3>
 <!-- /wp:heading -->
+
 <!-- wp:paragraph -->
 <p>النسخة المشروحة برنامج محلي للكمبيوتر؛ ظهور الواجهة في المتصفح لا يجعلها خدمة عامة تعمل على الهاتف. توضح وثائق المشروع إعداد Windows وخيارات Linux وmacOS وDocker. لم نختبر تشغيلها كخدمة عامة متعددة المستخدمين.</p>
 <!-- /wp:paragraph -->
+
 <!-- wp:heading {"level":3} -->
 <h3 class="wp-block-heading">هل الفيديو جاهز للنشر على Shorts وReels؟</h3>
 <!-- /wp:heading -->
+
 <!-- wp:paragraph -->
 <p>تنتج الأداة فيديو MP4 عمودياً عند اختيار Portrait، ويمكن رفعه يدوياً بعد مراجعته والتحقق من متطلبات المنصة وحقوق المحتوى. لا تتضمن هذه النسخة نشراً تلقائياً أو وعداً بالمشاهدات أو تحقيق الربح.</p>
 <!-- /wp:paragraph -->
+
 <!-- wp:heading {"level":3} -->
 <h3 class="wp-block-heading">كم آية يمكن وضعها في فيديو واحد؟</h3>
 <!-- /wp:heading -->
+
 <!-- wp:paragraph -->
 <p>تقبل النسخة من آية إلى 12 آية متتالية، بمدة إجمالية لا تتجاوز ثلاث دقائق. وقد ترفض تخطيطاً لنص طويل رغم أنه ضمن هذا العدد؛ عندها عدّل العرض والحجم والمقاس أو اختيار الترجمة، مع الحفاظ على الآيات كاملة.</p>
 <!-- /wp:paragraph -->
+
 <!-- wp:heading -->
-<h2 class="wp-block-heading" id="download">نزّل الأداة وابدأ بمقطع قصير</h2>
+<h2 class="wp-block-heading" id="download">نزّل أداة إنشاء فيديو قرآن وابدأ بمقطع قصير</h2>
 <!-- /wp:heading -->
+
 <!-- wp:paragraph -->
 <p>لإنشاء فيديو قرآن لأول مرة، ابدأ بسورة الإخلاص ومقاس Portrait 720p، وراجع نصها وتلاوتها، ثم أضف شعارك واضبط مواضع العناصر قبل التصدير. احتفظ بملفات المصادر مع الفيديو، وسجّل أي مشكلة قابلة لإعادة التجربة في <a href="https://github.com/mouad73/quran-reels-studio/issues">Issues داخل المستودع</a>.</p>
 <!-- /wp:paragraph -->
+
 <!-- wp:buttons -->
 <div class="wp-block-buttons"><!-- wp:button -->
 <div class="wp-block-button"><a class="wp-block-button__link wp-element-button" id="qrs-download-bottom" href="https://github.com/mouad73/quran-reels-studio/archive/c6ef704985ba59363a44e6cc3ba33620badb1a2c.zip">تنزيل الأداة مجاناً من GitHub</a></div>
-<!-- /wp:button --><!-- wp:button {"className":"is-style-outline"} -->
+<!-- /wp:button -->
+
+<!-- wp:button {"className":"is-style-outline"} -->
 <div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="#install">ابدأ خطوات التثبيت</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons -->
+
 <!-- wp:heading -->
 <h2 class="wp-block-heading" id="sources">المصادر ووثائق التشغيل</h2>
 <!-- /wp:heading -->
-<!-- wp:list -->
-<ul class="wp-block-list"><li><a href="https://github.com/mouad73/quran-reels-studio">المستودع الرسمي للأداة</a> و<a href="https://github.com/mouad73/quran-reels-studio/blob/c6ef704985ba59363a44e6cc3ba33620badb1a2c/docs/VALIDATION.md">سجل التحقق للنسخة المشروحة</a>.</li><li><a href="https://alquran.cloud/api">AlQuran Cloud: نسخ النص والتلاوة وواجهاتها</a>.</li><li><a href="https://www.pexels.com/api/documentation/">وثائق Pexels</a> و<a href="https://pixabay.com/api/docs/">وثائق Pixabay</a>.</li><li><a href="https://ffmpeg.org/download.html">تنزيل FFmpeg</a> و<a href="https://pillow.readthedocs.io/en/stable/installation/building-from-source.html">متطلبات تشكيل النص في Pillow</a>.</li></ul>
+
+<!-- wp:list {"className":"wp-block-list"} -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><a href="https://github.com/mouad73/quran-reels-studio">المستودع الرسمي للأداة</a> و<a href="https://github.com/mouad73/quran-reels-studio/blob/c6ef704985ba59363a44e6cc3ba33620badb1a2c/docs/VALIDATION.md">سجل التحقق للنسخة المشروحة</a>.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="https://alquran.cloud/api">AlQuran Cloud: نسخ النص والتلاوة وواجهاتها</a>.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="https://www.pexels.com/api/documentation/">وثائق Pexels</a> و<a href="https://pixabay.com/api/docs/">وثائق Pixabay</a>.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="https://ffmpeg.org/download.html">تنزيل FFmpeg</a> و<a href="https://pillow.readthedocs.io/en/stable/installation/building-from-source.html">متطلبات تشكيل النص في Pillow</a>.</li>
+<!-- /wp:list-item --></ul>
 <!-- /wp:list -->
+
 <!-- wp:html -->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","@id":"https://techmouad.com/إنشاء-فيديو-قرآن/#source-code","name":"Quran Reels Studio","description":"أداة محلية مفتوحة المصدر لإنشاء فيديو قرآن بتلاوة أصلية وخلفيات وشعار ونصوص قابلة للتخصيص.","url":"https://github.com/mouad73/quran-reels-studio","codeRepository":"https://github.com/mouad73/quran-reels-studio","programmingLanguage":"Python","runtimePlatform":"Python 3.11+ and FFmpeg","version":"0.2.0","license":"https://github.com/mouad73/quran-reels-studio/blob/c6ef704985ba59363a44e6cc3ba33620badb1a2c/LICENSE","isAccessibleForFree":true,"creator":{"@type":"Organization","name":"TechMouad","url":"https://techmouad.com/"},"mainEntityOfPage":"https://techmouad.com/إنشاء-فيديو-قرآن/"}</script>
 <!-- /wp:html -->
+
 <!-- wp:html -->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoObject","@id":"https://techmouad.com/إنشاء-فيديو-قرآن/#tutorial","name":"إنشاء فيديو قرآن بشعارك: شرح Quran Reels Studio خطوة بخطوة","description":"تسجيل فعلي لواجهة Quran Reels Studio مع تعليمات عربية مكتوبة لاختيار الخلفية والآيات وإضافة الشعار وضبط التصميم والتصدير. يتضمن مثال النتيجة تلاوة الآيات.","thumbnailUrl":["https://techmouad.com/wp-content/uploads/2026/11/tutorial-poster.webp"],"uploadDate":"2026-11-02T15:32:18Z","duration":"PT1M55S","contentUrl":"https://techmouad.com/wp-content/uploads/2026/11/tutorial-final-ar.mp4","inLanguage":"ar","creator":{"@type":"Organization","name":"TechMouad","url":"https://techmouad.com/"},"isAccessibleForFree":true}</script>
 <!-- /wp:html -->
+

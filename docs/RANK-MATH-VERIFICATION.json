@@ -1,0 +1,23 @@
+{
+  "verifiedAt": "2026-11-02T16:51:15.808Z",
+  "postId": 1011,
+  "status": "draft",
+  "rankMathEditorScore": 100,
+  "verification": "Read the real editor toolbar, saved the draft, reloaded the editor and observed 100 / 100 again. No score metadata or scoring filters were assigned manually.",
+  "groups": {
+    "basicSEO": "All Good",
+    "additional": "All Good",
+    "titleReadability": "All Good",
+    "contentReadability": "All Good"
+  },
+  "editorWordCount": 2924,
+  "editorKeywordDensity": 1.06,
+  "editorKeywordOccurrences": 31,
+  "tutorialPlayback": {
+    "durationSeconds": 114.925333,
+    "readyState": 4,
+    "playing": true,
+    "error": null
+  },
+  "contentSha256": "e1215757fcd0596be234755ac37beb994fae4b4a854945998f1ba914ae7f91d9"
+}
