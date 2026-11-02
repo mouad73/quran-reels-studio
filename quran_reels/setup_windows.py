@@ -15,6 +15,7 @@ from pathlib import Path
 
 URL = "https://conda.anaconda.org/conda-forge/win-64/fribidi-1.0.18-hfd05255_0.conda"
 SHA256 = "beb4dad871f0e1fcfb088698ec08898bca9f4b0b385053aafafe4eee352654b5"
+CHECK = "import quran_reels; from PIL import features; raise SystemExit(0 if features.check_feature('raqm') else 1)"
 
 
 def install(*, force=False):
@@ -28,7 +29,7 @@ def install(*, force=False):
     # Verify the existing Pillow runtime in a fresh process so feature detection
     # is not cached before a newly installed DLL can be loaded.
     import subprocess
-    check = subprocess.run([sys.executable, "-c", "from PIL import features; raise SystemExit(0 if features.check_feature('raqm') else 1)"], capture_output=True)
+    check = subprocess.run([sys.executable, "-c", CHECK], capture_output=True)
     if check.returncode == 0 and not force:
         print("Arabic text shaping is ready (RAQM/FriBiDi).")
         return
@@ -63,7 +64,7 @@ def install(*, force=False):
     for name, content in extracted.items():
         if name.startswith("info/licenses/"):
             (license_dir / Path(name).name).write_bytes(content)
-    result = subprocess.run([sys.executable, "-c", "from PIL import features; raise SystemExit(0 if features.check_feature('raqm') else 1)"], capture_output=True)
+    result = subprocess.run([sys.executable, "-c", CHECK], capture_output=True)
     if result.returncode:
         raise SystemExit("FriBiDi was installed, but Pillow could not load it. See the README's Windows troubleshooting and Docker option.")
     print("Arabic text shaping is ready. FriBiDi license saved in .venv/fribidi-license/.")
