@@ -1,0 +1,29 @@
+{
+  "title": "إنشاء فيديو قرآن بشعارك: شرح Quran Reels Studio المجاني",
+  "seoTitle": "إنشاء فيديو قرآن بشعارك مجاناً | Quran Reels Studio",
+  "metaDescription": "أنشئ فيديو قرآن بخلفية طبيعية وتلاوة حقيقية وشعارك باستخدام Quran Reels Studio. أداة مفتوحة المصدر مع تحكم في النصوص وشرح التثبيت والتصدير خطوة بخطوة.",
+  "excerpt": "أداة مجانية ومفتوحة المصدر تجمع تلاوة حقيقية ونص الآيات وخلفية فيديو، مع شعارك وترجمة اختيارية. جرّب الإعداد على جهازك واتبع مثالاً موثقاً قبل تصدير MP4.",
+  "slug": "quran-reels-studio",
+  "canonical": "https://techmouad.com/quran-reels-studio/",
+  "focusKeyword": "إنشاء فيديو قرآن",
+  "secondaryKeywords": [
+    "تصميم فيديو قرآن",
+    "صانع فيديو قرآن",
+    "ريلز قرآنية",
+    "إضافة شعار إلى فيديو قرآن",
+    "Quran Reels Studio"
+  ],
+  "audience": "صناع المحتوى القرآني الذين يريدون أداة محلية مفتوحة المصدر والتحكم في التصميم",
+  "searchIntent": "تنزيل أداة مع شرح عملي؛ لا تستهدف وعد تشغيل على الهاتف أو خدمة ويب دون تثبيت",
+  "evidenceDate": "2026-11-02",
+  "version": "0.2.0",
+  "sourceCommit": "c6ef704985ba59363a44e6cc3ba33620badb1a2c",
+  "downloadUrl": "https://github.com/mouad73/quran-reels-studio/archive/c6ef704985ba59363a44e6cc3ba33620badb1a2c.zip",
+  "keywordVolume": "لم يُتحقق من حجم البحث؛ الاختيارات فرضيات مبنية على قصد البحث وخصائص الأداة.",
+  "featuredMedia": 1014,
+  "categories": [
+    51,
+    10
+  ],
+  "status": "draft"
+}
