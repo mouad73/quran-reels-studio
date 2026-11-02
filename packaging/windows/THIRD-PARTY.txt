@@ -1,0 +1,32 @@
+Quran Reels Studio application code: MIT (LICENSE-APP.txt).
+
+Python 3.13.17 embeddable runtime is provided by the Python Software Foundation.
+The original LICENSE.txt and bundled components are retained in runtime/.
+https://www.python.org/ftp/python/3.13.17/
+
+Third-party Python packages are installed from the exact wheels and SHA-256
+hashes in runtime-requirements.lock. Their original *.dist-info directories,
+licenses, notices and binary-library license directories remain in
+runtime/Lib/site-packages/. BUILD-MANIFEST.json lists every packaged version.
+
+FriBiDi 1.0.18 (LGPL-2.1-or-later) is loaded as a separate, replaceable DLL.
+Its license is retained in runtime/fribidi-license/.
+The corresponding upstream source archive and actual conda build recipe are
+included in runtime/fribidi-source/. The DLL may be replaced independently.
+Source: https://github.com/fribidi/fribidi/releases/tag/v1.0.18
+Binary package and build recipe: https://anaconda.org/conda-forge/fribidi
+
+Amiri font: SIL Open Font License, app/quran_reels/fonts/OFL.txt.
+
+FFmpeg is NOT contained in this application download. At first launch, the
+application downloads the pinned GyanD essentials archive directly to the
+user's own computer, verifies its SHA-256, and keeps its license alongside
+ffmpeg.exe and ffprobe.exe in the user's local application data folder.
+It invokes these separate executable programs; it does not link FFmpeg
+libraries into the application. No FFmpeg download is uploaded to our releases.
+Upstream: https://github.com/GyanD/codexffmpeg/releases/tag/9.0.2
+Licensing: https://ffmpeg.org/legal.html
+
+Runtime downloads and application packages may not be silently replaced.
+To update a pinned component, review its version, checksum and license,
+rebuild the package, run the documented checks, then publish a new release.

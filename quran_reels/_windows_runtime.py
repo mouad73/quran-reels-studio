@@ -10,6 +10,8 @@ def preload_fribidi():
     if sys.platform != "win32" or _FRIBIDI is not None:
         return
     dll = Path(sys.prefix) / "Scripts" / "fribidi.dll"
+    if not dll.is_file():
+        dll = Path(sys.executable).parent / "fribidi.dll"
     if dll.is_file():
         import ctypes
         try:

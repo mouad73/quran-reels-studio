@@ -15,8 +15,9 @@ from dotenv import load_dotenv
 from quran_reels.renderer import SIZES, check_dependencies, generate
 from quran_reels.layout import TEXT_ELEMENTS, VideoStyle, TextStyle, LogoStyle, compose_overlay, load_logo, overlap_warnings, preview_image
 from quran_reels.sources import RECITERS, TRANSLATIONS, UserError, fetch_passage, surahs
+from quran_reels.desktop import data_directory
 
-ROOT = Path(__file__).resolve().parent
+ROOT = data_directory()
 load_dotenv(ROOT / ".env")
 st.set_page_config(page_title="Quran Reels Studio", page_icon="🌙", layout="wide")
 st.title("Quran Reels Studio")

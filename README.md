@@ -27,7 +27,11 @@ By [TechMouad](https://techmouad.com). [دليل عربي](docs/README.ar.md).
 
 ## Install
 
-Requires **Python 3.11+** and **FFmpeg/ffprobe** on PATH. A CPU is sufficient; rendering speed depends on your computer.
+**Windows x64 — easiest option:** [download the ready-to-run Windows ZIP](https://github.com/mouad73/quran-reels-studio/releases/download/v0.3.0/Quran-Reels-Studio-0.3.0-Windows-x64.zip), choose **Extract All**, then open **QuranReelsStudio.exe**. Python and the app are included. The first launch automatically downloads and verifies FFmpeg from its upstream release; no administrator access or manual Python/FFmpeg installation is needed. Internet is required for first setup and Quran text/audio. Keep the launcher window open while working; closing it stops the local server and any current render. Use its **videos folder** button to find saved results.
+
+This release targets **Windows 10/11 x64** with the included .NET Framework 4.x. It is an unsigned portable download, not a Microsoft Store installer. See [Windows packaging and verification](docs/WINDOWS.md) and [checksums](https://github.com/mouad73/quran-reels-studio/releases/tag/v0.3.0).
+
+**Source installation (all platforms):** requires **Python 3.11+** and **FFmpeg/ffprobe** on PATH. A CPU is sufficient; rendering speed depends on your computer.
 
 Install FFmpeg using your system's package manager, or follow [FFmpeg's download instructions](https://ffmpeg.org/download.html). For example:
 
@@ -136,7 +140,7 @@ Each successful run writes a new folder in `output/`:
 | `credits.txt` | Quran and stock source information to keep with your video |
 | `layout.json` | Visibility, positions, sizes, logo opacity, watermark and background settings |
 
-The app binds to localhost by default. Keys typed in the sidebar stay in that Streamlit session; `.env` keys stay on disk until you remove them. Stock search responses are cached in `.cache/stock` for 24 hours, in line with Pixabay's caching guidance. Downloads and intermediate files use a temporary directory. Output videos remain until you delete them. This is a local single-user tool: deploying it as an internet service requires authentication, quotas, storage controls, and a separate security review.
+The app binds to localhost by default. Keys typed in the sidebar stay in that Streamlit session; `.env` keys stay on disk until you remove them. Stock search responses are cached in `.cache/stock` for 24 hours, in line with Pixabay's caching guidance. Downloads and intermediate files use a temporary directory. Output videos remain until you delete them. The Windows package stores these folders and its log in `%LOCALAPPDATA%\QuranReelsStudio`; source installs keep using the project folder. This is a local single-user tool: deploying it as an internet service requires authentication, quotas, storage controls, and a separate security review.
 
 ## Accuracy and limitations
 

@@ -3,6 +3,7 @@
 !.env.example
 .venv/
 .test-venv/
+.package-venv/
 __pycache__/
 *.pyc
 *.egg-info/

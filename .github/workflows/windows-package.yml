@@ -1,0 +1,35 @@
+name: Windows package
+on:
+  workflow_dispatch:
+  push:
+    tags: ['v*']
+permissions:
+  contents: read
+jobs:
+  package:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Prepare build environment
+        run: |
+          python -m venv .package-venv
+          .package-venv\Scripts\python.exe -m pip install -e ".[dev]"
+          .package-venv\Scripts\python.exe -m quran_reels.setup_windows
+      - name: Test and build
+        run: |
+          .package-venv\Scripts\python.exe -m pytest -q
+          .package-venv\Scripts\python.exe packaging/windows/build.py
+      - name: Test the extracted download
+        run: |
+          Expand-Archive -LiteralPath (Get-ChildItem dist/*.zip).FullName -DestinationPath build/extracted-release
+          .package-venv\Scripts\python.exe packaging/windows/smoke.py build/extracted-release/QuranReelsStudio
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Quran-Reels-Studio-Windows-x64
+          path: |
+            dist/*.zip
+            dist/*.sha256
+            build/extracted-release/smoke-result.json

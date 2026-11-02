@@ -20,7 +20,7 @@ SIZES = {"Portrait 720p": (720, 1280), "Portrait 1080p": (1080, 1920), "Square 7
 
 def run(command, timeout=900):
     try:
-        return subprocess.run(command, check=True, capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=timeout)
+        return subprocess.run(command, check=True, capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=timeout, creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0))
     except FileNotFoundError:
         raise UserError("Install FFmpeg and ffprobe, then restart the app. See README.md.") from None
     except subprocess.TimeoutExpired:

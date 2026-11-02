@@ -30,3 +30,29 @@ The v0.2 checks cover independent visibility/placement of every text element, re
 ## Limits of this evidence
 
 These checks cover a few short passages and two stock providers. They do not establish that every ayah fits every layout, that all provider assets have suitable content, or that redistribution rights apply to every recording/translation. Per-word synchronization, automatic content moderation, multi-user hosting, GPU performance, and social-platform delivery are outside this version's scope.
+
+## v0.3 Windows package (2 November 2026)
+
+- **42 automated tests passed** after the desktop bootstrap changes. New cases
+  reject a modified engine archive, ignore unrelated extraction paths, check
+  cached executable hashes/offline reuse, and cover the explicit data directory.
+- Private CPython **3.13.17**, Streamlit **1.66.1**, Pillow **12.3.0**; embedded
+  imports and RAQM succeeded with only `Windows\System32` on PATH.
+- The first-run FFmpeg **9.0.2** download was verified against its pinned SHA-256.
+  Real H.264/AAC encoding and ffprobe checks passed from an Arabic-named data
+  directory. The embedded Streamlit server became healthy on loopback.
+- The Arabic native launcher reached its ready state and opened the browser.
+  Browser review loaded Al-Ikhlaas 112:1–4, Arabic text, supplied audio controls
+  and design preview from the packaged runtime. Closing the launcher stopped
+  its local server; the existing development server was left running.
+- A complete **13.1-second 720×1280 MP4** for 112:1–4 was generated with the
+  embedded Python, first-run downloaded FFmpeg, Alafasy, English meaning and
+  local footage. The system Python and FFmpeg were excluded from PATH. The
+  renderer's probing/full decode passed and a representative frame was reviewed.
+- The folder button invoked Explorer with the expected existing data path, but
+  the automation host's Explorer reported the path unavailable. Shell folder/log
+  opening therefore remains unverified in this host. This was **not a clean
+  Windows VM test**, a signed-binary trust check, or a Windows ARM test.
+- Build inputs are allowlisted. The archive retains dependency licenses,
+  Python metadata, FriBiDi's corresponding source/build recipe, and a build
+  manifest. User keys, `.env`, videos, logs and caches are not packaged.
