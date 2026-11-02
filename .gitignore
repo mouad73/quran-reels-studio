@@ -1,0 +1,13 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+output/
+.cache/
+build/
+dist/
+.streamlit/secrets.toml

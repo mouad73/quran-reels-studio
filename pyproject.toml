@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quran-reels-studio"
+version = "0.1.0"
+description = "Create Quran videos locally with real recitation and stock backgrounds."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = ["Pillow>=11.3,<13", "requests>=2.32.4,<3", "streamlit>=1.46,<2", "python-dotenv>=1.1,<2"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[project.scripts]
+quran-reels = "quran_reels.cli:main"
+
+[tool.setuptools.package-data]
+quran_reels = ["fonts/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
